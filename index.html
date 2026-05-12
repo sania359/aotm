@@ -3,71 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>aotm</title>
-</head>
+<title>Arena Animation</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
 body{
-    background:#f5f5f5;
-    height:800px;
-    display:flex;
-    flex-direction:column;
+background:#a48f8f;
+color:white;
 }
 
-/* Header */
+
+
 header{
-    width:100%;
-    background:#ffffff;
-    padding:18px 60px;
-    box-shadow:10px 10px 10px gray;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    
+background:black;
+padding:20px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
-nav{
-    display:flex;
-    gap:30px;
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#ffd500;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+}
+
+.box{
+background:#ffd500;
+color:black;
+padding:10px 20px;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
+
+
+
+.hero{
+padding:100px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:40px;
+}
+
+
+
+.features{
+padding:50px 5%;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.box{
+background:#601313;
+padding:30px;
+text-align:center;
+border-radius:30px;
+}
+.title{
+font-size:40px;
+margin-bottom:40px;
+}
+.course{
+background:#1b1b1b;
+padding:20px;
+border-radius:15px;
 }
 footer{
-    margin-top:auto;
-    background:#111827;
-    color:white;
-    text-align:center;
-    padding:20px;
-    font-size:15px;
+background:black;
+padding:50px;
+margin-top:50px;
+text-align:center;
 }
 
+footer h2{
+color:#ffd500;
+margin-bottom:15px;
+}
+
+footer p{
+color:#aaa;
+margin-bottom:20px;
+}
+@media(max-width:900px){
+
+
+
+
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+gap:20px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+
 </style>
+</head>
+
 <body>
 
-<header>
-    <h3>
-    Arena Animation 
-    <br>
-    GTB Nager
-    </h3>
-    
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Courses</a>
-        <a href="#">Contact</a>
 
-    </nav>
+<header>
+
+<div class="logo">
+Arena Animation
+<br>GT Nager
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Courses</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+</nav>
+
+
 </header>
 
-</body>
+
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+Learn <span>Create</span> Inspire
+</h1>
+
+<p>
+Learn Animation, VFX, Graphic Design,
+UI/UX and Web Design from industry experts.
+</p>
+
+
+Explore Courses
+</a>
+
+</div>
+
+<div class="hero-img">
+
+
+
+</div>
+
+</section>
+
+
+
+<section class="features">
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+</section>
+
+
+<section class="courses">
+
+<h2 class="title">
+Courses
+</h2>
+
+<div class="course-container">
+
+<div class="course"><h3>Graphic Design</h3></div>
+
+<div class="course"><h3>Animation</h3></div>
+
+<div class="course"><h3>UI/UX Design</h3></div>
+
+
+</section>
+
+
 <footer>
-    <p>© 2026 Animation Institute. All Rights Reserved.</p>
+
+<h2>
+Arena Animation
+<br>
+GTB Nager
+</h2>
+
+© 2026 Arena Animation GTB Nager. 
+<br>
+All Rights Reserved
+</p>
+
 </footer>
 
+</body>
 </html>
