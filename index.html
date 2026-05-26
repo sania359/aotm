@@ -1,146 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arena Animation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Animation GTB Nager</title>
 
-<style>
+     <link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-body{
-background:#a48f8f;
-color:white;
-}
-
-
-
-header{
-background:black;
-padding:20px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-color:#ffd500;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-}
-
-.box{
-background:#ffd500;
-color:black;
-padding:10px 20px;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
-}
-
-
-
-.hero{
-padding:100px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:40px;
-}
-
-
-
-.features{
-padding:50px 5%;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-}
-
-.box{
-background:#601313;
-padding:30px;
-text-align:center;
-border-radius:30px;
-}
-.title{
-font-size:40px;
-margin-bottom:40px;
-}
-.course{
-background:#1b1b1b;
-padding:20px;
-border-radius:15px;
-}
-footer{
-background:black;
-padding:50px;
-margin-top:50px;
-text-align:center;
-}
-
-footer h2{
-color:#ffd500;
-margin-bottom:15px;
-}
-
-footer p{
-color:#aaa;
-margin-bottom:20px;
-}
-@media(max-width:900px){
-
-
-
-
-@media(max-width:600px){
-
-header{
-flex-direction:column;
-gap:20px;
-}
-
-nav{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-
-</style>
 </head>
-
 <body>
-
-
 <header>
-
 <div class="logo">
-Arena Animation
-<br>GTB Nager
+    <img src="images/logo.jpg" alt="Arena Logo">
 </div>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Courses</a>
-<a href="#">Gallery</a>
-<a href="#">Contact</a>
-</nav>
+<input type="checkbox" id="menu">
 
+<label for="menu" class="menu-icon">
+<i class="fa-solid fa-bars"></i>
+</label>
+
+<div class="navbar">
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#courses">Courses</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+
+
+</div>
 
 </header>
 
@@ -150,24 +43,23 @@ Arena Animation
 
 <div class="hero-text">
 
+<h4>WELCOME TO ARENA ANIMATION</h4>
+
 <h1>
-Learn <span>Create</span> Inspire
+BUILD YOUR <span>DREAM</span> CREATIVE CAREER
 </h1>
 
 <p>
-Learn Animation, VFX, Graphic Design,
-UI/UX and Web Design from industry experts.
+Learn Animation, VFX, Graphic Design, Web Design and modern AI tools with practical projects and industry experts.
 </p>
 
-
-Explore Courses
-</a>
+<a href="#" class="btn1">Explore Courses</a>
 
 </div>
 
-<div class="hero-img">
+<div class="hero-image">
 
-
+<img src="images/H2.png" alt="Arena Students">
 
 </div>
 
@@ -175,47 +67,280 @@ Explore Courses
 
 
 
-<section class="features">
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
+<div class="features">
 
-</section>
+<div class="feature-box">
+<i class="fa-solid fa-user-graduate"></i>
+<h3>Expert Faculty</h3>
+<p>Learn from experienced mentors and creative professionals.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-laptop-code"></i>
+<h3>Modern Labs</h3>
+<p>Advanced systems with latest design and AI software.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-briefcase"></i>
+<h3>Placement Support</h3>
+<p>Career guidance with professional placement assistance.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-award"></i>
+<h3>Certified Courses</h3>
+<p>Industry-recognized certification programs for students.</p>
+</div>
+
+</div>
 
 
-<section class="courses">
 
-<h2 class="title">
-Courses
-</h2>
+<section>
+
+<div class="section-title">
+<h2>Popular Courses</h2>
+<a href="#">View All</a>
+</div>
 
 <div class="course-container">
 
-<div class="course"><h3>Graphic Design</h3></div>
+<div class="course-card">
 
-<div class="course"><h3>Animation</h3></div>
+<img src="images/G1.jpg"alt="Graphic Design">
 
-<div class="course"><h3>UI/UX Design</h3></div>
+<div class="course-content">
+<h3>Graphic Design</h3>
+<p>Create posters, branding and professional visual content.</p>
+<a href="#">Learn More →</a>
+</div>
 
+</div>
+
+<div class="course-card">
+
+<img src="images/V1.jpg"alt="Video Editing">
+
+<div class="course-content">
+<h3>Video Editing</h3>
+<p>Creative edits with smooth transitions, cinematic effects and modern visuals.</p>
+<a href="#">Learn More →</a>
+</div>
+
+</div>
+
+<div class="course-card">
+
+<img src="images/W1.jpg"alt="UI-UX Design">
+
+<div class="course-content">
+<h3>UI / UX Design</h3>
+<p>Create beautiful mobile apps and website interfaces.</p>
+<a href="#">Learn More →</a>
+</div>
+
+</div>
+
+<div class="course-card">
+
+<img src="images/Ai.jpg" alt="AI Course">
+
+<div class="course-content">
+<h3>AI Course</h3>
+<p>Learn AI tools, prompt engineering and generative design.</p>
+<a href="#">Learn More →</a>
+</div>
+
+</div>
+
+</div>
 
 </section>
+
+
+
+<section>
+
+<div class="about-section">
+
+<div class="about-text">
+
+<h2>About <span>Us</span></h2>
+
+<p>
+Arena Animation GTB Nagar is one of the leading institutes for Animation, VFX, Graphic Design, Web Design and AI learning.
+</p>
+
+<p>
+Students learn from professional mentors using modern software and creative technologies to build successful careers.
+</p>
+
+<div class="about-boxes">
+</div>
+
+<a href="#" class="know-btn">Know More</a>
+
+</div>
+
+<div class="about-image">
+
+<img src="images/B1.jpg" alt="About Arena">
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="gallery">
+
+<div class="section-title">
+    <h2>Student Work Gallery</h2>
+</div>
+
+<div class="gallery">
+
+    <!-- BOX 1 -->
+
+    <div class="gallery-card">
+        <img src="images/poster.jpg" alt="Poster Design ">
+    </div>
+
+    <!-- BOX 2 -->
+
+    <div class="gallery-card">
+        <img src="images/llustration.jpg" alt="Illustration">
+    </div>
+
+    <!-- BOX 3 -->
+
+    <div class="gallery-card">
+        <img src="images/Web Design.jpg" alt="Web Design">
+    </div>
+
+    <!-- BOX 4 -->
+
+    <div class="gallery-card">
+        <img src="images/2D Animation.jpg" alt="2D animation">
+    </div>
+</div>
+
+</section>
+
+
+
+<div class="stats">
+
+<div class="stat-box">
+<h1>5000+</h1>
+<p>Students</p>
+</div>
+
+<div class="stat-box">
+<h1>50+</h1>
+<p>Courses</p>
+</div>
+
+<div class="stat-box">
+<h1>100+</h1>
+<p>Placement Partners</p>
+</div>
+
+<div class="stat-box">
+<h1>20+</h1>
+<p>Years Experience</p>
+</div>
+
+</div>
+
+
+
+<section>
+
+<div class="contact-container">
+
+<div class="contact-left">
+
+<h2>Get In Touch</h2>
+
+<p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+
+<p><i class="fa-solid fa-envelope"></i> info@arena.com</p>
+
+<p><i class="fa-solid fa-location-dot"></i> GTB Nagar, Delhi</p>
+
+<div class="enquiry">
+
+<h3>Admissions & Enquiries</h3>
+
+<p>
+Contact our team for course details, fee structure,
+demo classes and career guidance.
+</p>
+
+</div>
+
+</div>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
 
 
 <footer>
 
-<h2>
-Arena Animation
-<br>
-GTB Nager
-</h2>
+<div class="footer-container">
 
-© 2026 Arena Animation GTB Nager. 
-<br>
-All Rights Reserved
+<div class="footer-logo">
+
+<img src="images/logo.jpg" alt="Arena Logo" class="footer-img">
+
+<p>
+Arena Animation GTB Nagar is a leading institute for Animation, VFX, Graphic Design, Web Design and AI Courses.
 </p>
+
+
+</div>
+
+<div class="footer-links">
+<h3>Quick Links</h3>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Courses</a>
+<a href="#gallery">Gallery</a>
+</div>
+
+<div class="footer-links">
+<h3>Contact</h3>
+<a href="#">+91 98765 43210</a>
+<a href="#">info@arena.com</a>
+<a href="#">GTB Nagar, Delhi</a>
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 Arena Animation GTB Nagar. All Rights Reserved.
+</div>
 
 </footer>
 
 </body>
 </html>
+
+
