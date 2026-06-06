@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background:#bbbbbb;
+    background:#050505;
     color:white;
     overflow-x:hidden;
 }
@@ -153,8 +153,8 @@ header{
 
 .hero-image:hover{
      transform:translateY(-10px);
-    border-color:#b6a44d;
-    box-shadow:0 10px 25px rgba(255,213,0,0.15);
+    border-color:#ffd500;
+    
 }
 
 /* FEATURES */
@@ -177,8 +177,8 @@ header{
 
 .feature-box:hover{
     transform:translateY(-10px);
-    border-color:#b6a44d;
-    box-shadow:0 10px 25px rgba(255,213,0,0.15);
+    border-color:#ffd500;
+    box-shadow:0 0 25px rgba(255,213,0,0.25);
 }
 
 .feature-box i{
@@ -244,7 +244,6 @@ section{
 
 
 /* COURSES */
-
 .course-container{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -255,18 +254,28 @@ section{
     background:#0d0d0d;
     border-radius:25px;
     overflow:hidden;
-    border-color:#b6a44d;
-    box-shadow:0 10px 25px rgba(255,213,0,0.15);
     transition:0.5s;
+
+    /* ✅ IMPORTANT FIX */
+    border:1px solid transparent;
 }
 
 .course-card:hover{
     transform:translateY(-10px);
+    border-color:#ffd500;
+    box-shadow:0 0 25px rgba(255,213,0,0.25);
 }
+
 
 .course-card img{
     height:230px;
+    width:100%;
     object-fit:cover;
+    transition:0.5s;
+}
+
+.course-card:hover img{
+    transform:scale(1.05);
 }
 
 .course-content{
@@ -286,7 +295,14 @@ section{
 
 .course-content a{
     color:#ffd500;
+    font-weight:600;
+    transition:0.3s;
 }
+
+.course-content a:hover{
+    color:#fff;
+}
+
 
 /* ABOUT */
 
@@ -344,26 +360,39 @@ section{
     padding:100px 7%;
 }
 
+/* SECTION TITLE FIX (optional improvement) */
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* GRID */
 .gallery{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:30px;
 }
 
+/* CARD */
 .gallery-card{
     position:relative;
     border-radius:25px;
     overflow:hidden;
     cursor:pointer;
     transition:0.5s;
-    border-color:#b6a44d;
-    box-shadow:0 10px 25px rgba(255,213,0,0.15);
+    border:1px solid transparent;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
+/* HOVER EFFECT */
 .gallery-card:hover{
     transform:translateY(-10px);
+    border-color:#ffd500;
+    box-shadow:0 10px 30px rgba(255,213,0,0.2);
 }
 
+/* IMAGE */
 .gallery-card img{
     width:100%;
     height:420px;
@@ -371,17 +400,23 @@ section{
     transition:0.5s;
 }
 
+/* IMAGE ZOOM */
 .gallery-card:hover img{
     transform:scale(1.08);
 }
 
+/* INFO OVERLAY */
 .gallery-info{
     position:absolute;
     bottom:0;
     left:0;
     width:100%;
     padding:25px;
-    background:linear-gradient(transparent, rgba(0,0,0,0.95)  ); 
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,0.95)
+    );
 }
 
 .gallery-info h3{
@@ -395,12 +430,7 @@ section{
     line-height:24px;
 }
 
-.section-title{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
+/* BUTTON */
 .view-btn{
     background:#ffd500;
     color:#111;
@@ -408,7 +438,7 @@ section{
     border-radius:30px;
     text-decoration:none;
     font-weight:600;
-    transition:all 0.3s ease;
+    transition:0.3s;
 }
 
 .view-btn:hover{
@@ -417,9 +447,20 @@ section{
     box-shadow:0 8px 20px rgba(255,213,0,0.3);
 }
 
+/* RESPONSIVE */
 @media(max-width:1100px){
     .gallery{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-card img{
+        height:300px;
     }
 }
 

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Us - Arena Animation</title>
+<title>Gallery - Arena Animation</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -32,6 +32,7 @@ overflow-x:hidden;
 
 a{
 text-decoration:none;
+color:white;
 }
 
 img{
@@ -39,7 +40,7 @@ width:100%;
 display:block;
 }
 
-
+/* HEADER */
 
 header{
 width:100%;
@@ -56,16 +57,12 @@ backdrop-filter:blur(15px);
 border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-.logo{
-font-size:34px;
-font-weight:800;
-color:#ffd500;
-}
- 
 .logo img{
-    width: 140px;
-    height: auto;
+width:140px;
+height:auto;
 }
+
+/* NAV */
 
 nav{
 display:flex;
@@ -95,35 +92,20 @@ nav a:hover::after{
 width:100%;
 }
 
-.home-btn{
-padding:14px 28px;
-background:#ffd500;
-color:black;
-font-weight:700;
-border-radius:14px;
-transition:.4s;
-}
-
-.home-btn:hover{
-transform:translateY(-4px);
-box-shadow:0 0 20px rgba(255,213,0,0.5);
-}
-
-
+/* MENU */
 
 .menu-btn{
 display:none;
 font-size:28px;
 cursor:pointer;
 color:white;
-z-index:1001;
 }
 
 #menu{
 display:none;
 }
 
-
+/* MOBILE MENU */
 
 .mobile-menu{
 position:fixed;
@@ -144,9 +126,7 @@ border-left:1px solid #222;
 .mobile-menu a{
 color:white;
 font-size:18px;
-font-weight:500;
 position:relative;
-padding-bottom:6px;
 width:max-content;
 }
 
@@ -169,169 +149,95 @@ width:100%;
 right:0;
 }
 
+/* HERO */
 
-
-.about-hero{
-min-height:100vh;
-padding:180px 7% 120px;
+.gallery-hero{
+height:70vh;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-
-background: linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.88)),url("images/W1.jpg");
+padding:120px 7% 50px;
+background:
+linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 }
 
-.hero-content h4{
-color:#ff4d4d;
-letter-spacing:2px;
-margin-bottom:20px;
-}
-
-.hero-content h1{
+.gallery-hero h1{
 font-size:90px;
 font-weight:800;
 margin-bottom:20px;
 }
 
-.hero-content h1 span{
+.gallery-hero h1 span{
 color:#ffd500;
 }
 
-.hero-content p{
-max-width:850px;
+.gallery-hero p{
+max-width:750px;
 margin:auto;
 font-size:18px;
 line-height:34px;
 color:#cccccc;
 }
-.hero-btn{
-display:inline-block;
-margin-top:25px;
+
+/* GALLERY */
+
+.gallery-section{
+padding:100px 7%;
 }
 
-.hero-content .home-btn{
-    display:inline-block;
-    margin-top:40px; 
-}
-
-
-.about-section{
-padding:120px 7%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:center;
-}
-
-.about-image{
-position:relative;
-}
-
-.about-image img{
-height:600px;
-object-fit:cover;
-border-radius:35px;
-}
-
-.experience-box{
-position:absolute;
-bottom:30px;
-left:30px;
-background:#ffd500;
-color:black;
-padding:25px 35px;
-border-radius:20px;
-font-weight:700;
-}
-
-.experience-box h2{
-font-size:45px;
-}
-
-.about-text h2{
-font-size:60px;
-margin-bottom:25px;
-}
-
-.about-text h2 span{
-color:#ffd500;
-}
-
-.about-text p{
-font-size:17px;
-line-height:34px;
-color:#cccccc;
-margin-bottom:20px;
-}
-
-.about-features{
-margin-top:30px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.feature-box{
-background:#0d0d0d;
-padding:25px;
-border-radius:20px;
-border:1px solid #1a1a1a;
-transition:.4s;
-}
-
-.feature-box:hover{
-transform:translateY(-8px);
-border-color:#ffd500;
-}
-
-.feature-box i{
-font-size:40px;
-color:#ffd500;
-margin-bottom:15px;
-}
-
-.feature-box h3{
-margin-bottom:10px;
-font-size:22px;
-}
-
-.feature-box p{
-font-size:15px;
-line-height:28px;
-}
-
-
-
-.section-title{
+.gallery-title{
 text-align:center;
 margin-bottom:60px;
 }
 
-.section-title h2{
-font-size:58px;
+.gallery-title h2{
+font-size:55px;
 margin-bottom:15px;
 }
 
-.section-title h2 span{
+.gallery-title h2 span{
 color:#ffd500;
 }
 
-.section-title p{
-color:#bbbbbb;
+.gallery-title p{
 font-size:18px;
+color:#bbbbbb;
 }
 
+.gallery-container{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
 
+.gallery-card{
+background:#0d0d0d;
+border:1px solid #1a1a1a;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+height:320px;
+}
+
+.gallery-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+/* CTA */
 
 .cta{
-padding:0 7% 120px;
+padding:0 7% 100px;
 }
 
 .cta-box{
-background:linear-gradient(135deg,#111,#1c1c1c);
+background:linear-gradient(135deg,#111,#1b1b1b);
 padding:70px;
 border-radius:40px;
 text-align:center;
@@ -339,7 +245,7 @@ border:1px solid #222;
 }
 
 .cta-box h2{
-font-size:58px;
+font-size:55px;
 margin-bottom:20px;
 }
 
@@ -355,9 +261,9 @@ color:#cccccc;
 margin-bottom:35px;
 }
 
-.cta-btn{
+.btn{
 display:inline-block;
-padding:16px 35px;
+padding:16px 36px;
 background:#ffd500;
 color:black;
 font-weight:700;
@@ -365,11 +271,12 @@ border-radius:14px;
 transition:.4s;
 }
 
-.cta-btn:hover{
+.btn:hover{
 transform:translateY(-5px);
+box-shadow:0 0 20px rgba(255,213,0,0.4);
 }
 
-
+/* FOOTER */
 
 footer{
 padding:80px 7% 30px;
@@ -383,20 +290,15 @@ grid-template-columns:2fr 1fr 1fr;
 gap:40px;
 }
 
-.footer-logo h2{
-font-size:34px;
-color:#ffd500;
-margin-bottom:20px;
-}
-
 .footer-logo p{
 line-height:30px;
 color:#aaaaaa;
+margin-top:20px;
 }
 
 .footer-logo img{
-    width: 160px;
-    height: auto;
+width:160px;
+height:auto;
 }
 
 .footer-links h3{
@@ -470,81 +372,55 @@ border-top:1px solid #1a1a1a;
 padding-top:25px;
 }
 
-
-
-@media(max-width:1100px){
-
-.about-section{
-grid-template-columns:1fr;
-}
-
-.team-container{
-grid-template-columns:1fr 1fr;
-}
-
-.hero-content h1{
-font-size:65px;
-}
-
- .hero-content .home-btn{
-        margin-top:60px;
-    }
-
-}
-
+/* RESPONSIVE */
 
 @media(max-width:768px){
-
-header{
-padding:18px 5%;
-}
-
-nav,
-.home-btn{
-display:none;
-}
 
 .menu-btn{
 display:block;
 }
 
-.about-hero{
-padding:160px 5% 100px;
+nav{
+display:none;
 }
 
-.hero-content h1{
-font-size:48px;
+.gallery-hero{
+height:auto;
+padding:140px 5% 80px;
 }
 
-.hero-content p{
+.gallery-hero h1{
+font-size:50px;
+}
+
+.gallery-hero p{
 font-size:16px;
 line-height:30px;
 }
 
-.about-section{
-padding:90px 5%;
+.gallery-section{
+padding:80px 5%;
+}
+
+.gallery-title h2{
+font-size:38px;
+}
+
+.gallery-container{
 grid-template-columns:1fr;
+gap:25px;
 }
 
-.about-image img{
-height:380px;
+.gallery-card{
+height:260px;
 }
 
-.about-text h2{
-font-size:40px;
-}
-
-.about-features{
-grid-template-columns:1fr;
-}
-
-
-.section-title h2{
-font-size:40px;
+.gallery-card img{
+height:100%;
 }
 
 .cta{
-padding:0 5% 90px;
+padding:0 5% 80px;
 }
 
 .cta-box{
@@ -568,11 +444,6 @@ margin:auto auto 14px;
 justify-content:center;
 }
 
-.hero-content .home-btn{
-    display:inline-block;
-    margin-top:15px;
-}
-
 }
 
 </style>
@@ -580,15 +451,12 @@ justify-content:center;
 
 <body>
 
-
 <input type="checkbox" id="menu">
-
-
 
 <header>
 
 <div class="logo">
-<img src="images/logo.jpg" alt="Arena Logo" class="footer-img">
+<img src="images/logo.jpg" alt="Logo">
 </div>
 
 <nav>
@@ -599,19 +467,13 @@ justify-content:center;
 <a href="contact.html">Contact</a>
 </nav>
 
-
-
-
 <label for="menu" class="menu-btn">
 <i class="fa-solid fa-bars"></i>
 </label>
 
 </header>
 
-
-
 <div class="mobile-menu">
-
 <a href="index.html">Home</a>
 <a href="about.html">About Us</a>
 <a href="courses.html">Courses</a>
@@ -619,144 +481,83 @@ justify-content:center;
 <a href="contact.html">Contact</a>
 </div>
 
-
-
-<section class="about-hero">
-
-<div class="hero-content">
-
-<h4>WELCOME TO ARENA ANIMATION</h4>
-
-<h1>ABOUT <span>US</span></h1>
-
+<section class="gallery-hero">
+<div>
+<h1>Our <span>Gallery</span></h1>
 <p>
-Arena Animation GTB Nagar is a professional creative institute where students learn Animation, VFX, Graphic Design, Web Development, UI/UX and AI technologies with live projects and industry-level training.
+Explore creative student projects, animation works, UI/UX designs,
+web development projects and professional digital artworks created at
+Arena Animation GTB Nagar.
 </p>
-
-
-<a href="contact.html" class="home-btn">Enroll Now</a>
 </div>
-
 </section>
 
+<section class="gallery-section">
 
-<section class="about-section">
-
-<div class="about-image">
-
-<img src="images/A1.jpg">
-
-<div class="experience-box">
-<h2>15+</h2>
-Years Experience
+<div class="gallery-title">
+<h2>Creative <span>Showcase</span></h2>
+<p>Professional projects and creative work by our talented students.</p>
 </div>
 
+<div class="gallery-container">
+
+<div class="gallery-card">
+<img src="images/poster1.jpg" alt="">
 </div>
 
-<div class="about-text">
-
-<h2>We Build <span>Creative Careers</span></h2>
-
-<p>
-Arena Animation GTB Nagar helps students transform creativity into successful professional careers through practical learning and modern technologies.
-</p>
-
-<p>
-Our institute provides industry-focused courses with expert mentors, advanced labs, live projects and placement support for every student.
-</p>
-
-<p>
-We focus on real-world learning so students can confidently work in Animation, Graphic Design, Video Editing, Web Development and Artificial Intelligence industries.
-</p>
-
-<div class="about-features">
-
-<div class="feature-box">
-
-<i class="fa-solid fa-user-graduate"></i>
-
-<h3>Expert Faculty</h3>
-
-<p>
-Learn from experienced professionals and industry mentors.
-</p>
-
+<div class="gallery-card">
+<img src="images/poster2.jpg" alt="">
 </div>
 
-<div class="feature-box">
-
-<i class="fa-solid fa-briefcase"></i>
-
-<h3>Placement Support</h3>
-
-<p>
-Career guidance and interview preparation for students.
-</p>
-
+<div class="gallery-card">
+<img src="images/poster3.jpg" alt="">
 </div>
 
-<div class="feature-box">
-
-<i class="fa-solid fa-laptop-code"></i>
-
-<h3>Modern Labs</h3>
-
-<p>
-Advanced computer labs with latest software and tools.
-</p>
-
+<div class="gallery-card">
+<img src="images/il1.jpg" alt="">
 </div>
 
-<div class="feature-box">
-
-<i class="fa-solid fa-award"></i>
-
-<h3>Certified Courses</h3>
-
-<p>
-Professional certification programs with practical projects.
-</p>
-
+<div class="gallery-card">
+<img src="images/il2.jpg" alt="">
 </div>
 
+<div class="gallery-card">
+<img src="images/il3.jpg" alt="">
 </div>
 
 </div>
 
 </section>
-
-
 
 <section class="cta">
 
 <div class="cta-box">
-
-<h2>Start Your <span>Creative Journey</span></h2>
+<h2>Become A <span>Creative Professional</span></h2>
 
 <p>
-Join Arena Animation GTB Nagar and learn modern creative skills with practical projects and expert guidance.
+Join Arena Animation GTB Nagar and build your future in Animation,
+Web Design, Graphic Design, Video Editing and AI technologies.
 </p>
 
-<a href="contact.html" class="cta-btn">Join Now</a>
+<a href="index.html" class="btn">Back To Home</a>
 
 </div>
 
 </section>
-
-
-
 
 <footer>
 
 <div class="footer-container">
 
-
 <div class="footer-logo">
+
 <img src="images/logo.jpg" alt="Arena Logo">
 
 <p>
-Arena Animation GTB Nagar is a leading institute for Animation, VFX, Graphic Design, Web Design and AI Courses.
-We help students build creative careers with practical learning and live projects.
+Arena Animation GTB Nagar is a leading institute for Animation,
+VFX, Graphic Design, Web Design and AI Courses.
+We help students build creative careers with practical learning
+and live projects.
 </p>
 
 <div class="footer-social">
@@ -770,6 +571,7 @@ We help students build creative careers with practical learning and live project
 <a href="https://share.google/zCKenA6ANryQtExac"><i class="fa-brands fa-linkedin-in"></i></a>
 
 </div>
+
 </div>
 
 <div class="footer-links">
@@ -788,15 +590,17 @@ We help students build creative careers with practical learning and live project
 
 <h3>Contact</h3>
 
-<a href="tel:+919876543210">+91 98765 43210</a>
-<a href="mailto:info@arena.com">info@arena.com</a>
+<a href="#">+91 98765 43210</a>
+
+<a href="#">info@arena.com</a>
+
 <a href="#">GTB Nagar, Delhi</a>
-<a href="index.html">Back Home</a>
+
+<a href="contact.html">Enroll Now</a>
 
 </div>
 
 </div>
-
 
 <div class="copy">
 © 2026 Arena Animation GTB Nagar. All Rights Reserved.
