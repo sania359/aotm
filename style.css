@@ -1,0 +1,115 @@
+/* index css */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#f4f7ef;
+    color:#071a14;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+button{
+    font-family:inherit;
+}
+
+:root{
+    --dark:#071a14;
+    --dark-2:#0d281f;
+    --green:#1d6b4d;
+    --lime: #b7e65c;
+    --cream: #f4f7ef;
+    --white: #ffffff;
+    --gray: #66736d;
+    --border: rgba(7, 26, 20, 0.12);
+    --heading: "Space Grotesk", sans-serif; 
+}
+.navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    -index:1000;
+}
+.nav-container{
+    max-width:1250px;
+    margin:auto;
+    padding:28px 30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:"Space Grotesk", sans-serif;
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:-1px;
+}
+.logo > span:last-child > span{
+    color:#1d6b4d;
+}
+.logo-icon{
+    width:36px;
+    height:36px;
+    background:#b7e65c;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-size:15px;
+}
+.nav-links{
+    display:flex;
+    gap:34px;
+}
+.nav-links a{
+    font-size:14px;
+    font-weight:500;
+    color:#53615a;
+    transition:0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active{
+    color:#071a14;
+}
+
+.nav-btn{
+    background:#071a14;
+    color:white;
+    padding:12px 20px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.nav-btn i:{
+   color:#b7e65c;
+}
+
+.menu-btn{
+    display:none;
+    width:42px;
+    height:42px;
+    border:none;
+    background:transparent;
+    color:#071a14;
+    font: size 24px;
+    cursor:pointer;
+    align-items: center;
+    justify-content: center;
+}
+.menu-btn,
+.fa-xmark{
+    display:none;
+}
