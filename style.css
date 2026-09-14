@@ -36,7 +36,7 @@ button{
     top:0;
     left:0;
     width:100%;
-    -index:1000;
+    z-index:1000;
 }
 .nav-container{
     max-width:1250px;
@@ -112,4 +112,95 @@ button{
 .menu-btn,
 .fa-xmark{
     display:none;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    background-color:#f4f7ef;
+    position:relative;  
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+}
+.hero-container{
+    max-width:1250px;
+    width:100%;
+    padding:150px 30px 100px;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+}
+.eyebrow,
+.section-label{
+    display: inline-flex;
+    align-items:center;
+    gap:9px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+    color:#1d6b4d;
+}
+.eyebrow span{
+    width:8px;
+    height:8px;
+    background-color:#b7e65c;
+    border-radius:50%;
+}
+.hero h1{
+    font-family:"Space Grotesk", sans-serif; 
+    font-size:clamp(60px, 7vw , 100px);
+    line-height:0.95;
+    letter-spacing:-5px;
+    max-width:650px;
+    margin:25px 0;
+}
+.hero h1 span{
+    display:block;
+    color:#1d6b4d;
+}
+.hero-content > p{
+    max-width:520px;
+    color:#66736d;
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap: wrap;
+}
+.primary-btn,
+.secondary-btn,
+.outline-btn {
+    display: inline-flex;
+    align-items: center;
+    gap:12px;
+    padding:15px 22px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:700;
+    transition: 0.3s;
+}
+.primary-btn{
+   background-color:#071a14;
+   color:white; 
+}
+.primary-btn:hover{
+    transform:translateY(-3px) ;
+    background-color:#1d6b4d;
+}
+.primary-btn i {
+    color:#b7e65c;
+}
+.secondary-btn{
+   border:1px solid rgba(7, 26, 20, 0.12);
+   color:#071a14; 
+}
+.secondary-btn:hover{
+    background-color:white;
+    transform:translateY(-3px) ;
 }
