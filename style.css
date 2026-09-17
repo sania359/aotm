@@ -334,3 +334,148 @@ button {
     font-weight: 700;
     letter-spacing: 1px;
 }
+
+/* cta */
+
+.cta-section {
+    padding: 40px 30px 110px;
+    background: var(--cream);
+}
+
+.cta-box {
+    max-width: 1190px;
+    margin: auto;
+    background: var(--lime);
+    border-radius: 25px;
+    padding: 90px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box .section-label {
+    color: var(--dark)
+}
+
+.cta-box h2 {
+    font-family: var(--heading);
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    margin: 18px 0;
+}
+
+.cta-box span {
+    color: white;
+}
+
+.cta-box p {
+    color: #405331;
+    max-width: 420px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.primary-btn .dark {
+    background: var(--dark);
+}
+
+/* .cta-decoration{
+    position:absolute;
+    width:400px;
+    height:400px;
+    border:1px solid rgba(7, 26, 20, 0.15);
+    border-radius:50px;
+    right:-80px;
+    bottom:180px;
+} */
+
+footer {
+    background: var(--dark);
+    color: white;
+}
+
+.footer-container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 80px 30px;
+    display: flex;
+    justify-self: space-between;
+    gap: 50px;
+}
+
+.footer-logo {
+    color: white;
+}
+
+.footer-brand p {
+    color: #82928a;
+    max-width: 300px;
+    line-height: 1.6;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-links h4 {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #7e8e85;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.footer-links a {
+
+    display: block;
+    color: #b6c0bb;
+    font-size: 13px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+
+    color: var(--lime);
+}
+
+.footer-bottom {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    color: #697970;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: center;
+    align-items: center;
+    justify-content: center;
+    color: #b6c0bb;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+
+    background: var(--lime);
+    border-color: var(--lime);
+    color: var(--dark);
+    transform: translateY(-5px);
+}
