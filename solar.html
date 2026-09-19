@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <title>Solr Energy | EcoGen</title>
+
+        <!-- Google Fonts -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+
+
+        <!-- Font Awesome -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    </head>
+<style>
+ 
+ :root {
+
+    --dark: #071A14;
+    --dark-light: #0D241C;
+    --green: #1D6B4D;
+    --green-light: #2E8B63;
+    --lime: #B7E65C;
+    --cream: #F4F7EF;
+    --white: #ffffff;
+    --gray: #9DA9A3;
+    --heading: "Space Grotesk", sans-serif;
+    --border: rgba(255,255,255,0.12);
+}
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.navbar{
+    width:100%;
+    background:var(--dark);
+    color:var(--white);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.8);
+}
+
+.nav-container{
+    max-width: 1200px;
+    margin:auto;
+    min-height:78px;
+    padding:0 30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items: center;
+    gap:10px;
+    font-family:var(--heading);
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+.logo > span:last-child > span{
+    color:var(--lime);
+}
+.logo-icon{
+    width:38px;
+    height:38px;
+    background:var(--dark);
+    color:var(--dark);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.logo-icon i {
+    font-size:17px;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap:28px;
+}
+.nav-links a{
+    color:#B6C0BB;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--lime);
+}
+
+.nav-btn{
+    padding:11px 18px;
+    background:var(--lime);
+    color:var(--dark);
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+
+.solar-hero{
+    min-height:680px;
+    background:var(--dark);
+    color:var(--white);
+    position:relative;
+    overflow:hidden;
+}
+.hero-container{
+    max-width:1200px;
+    min-height:680px;
+    margin:auto;
+    padding:70px 30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items: center;
+    gap:50px;
+}
+
+.hero-label{
+    color:var(--lime);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+
+}
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </span>
+                <span>ECO<span>GEN</span></span>
+            </a>
+            <!-- NAVIGATION -->
+            <nav class="nav-links">
+                <a href="index.html" class="active"></a>
+                <a href="solar.html">Solar</a>
+                <a href="wind.html">Wind</a>
+                <a href="green.html">Green Lifestyle</a>
+                <a href="impact.html">Energy Impact</a>
+            </nav>
+
+            <a href="#" class="nav-btn">
+                button
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="solar-hero">
+            <div class="hero-container">
+
+                <div class="hero-content">
+                    <span class="hero-label">01 — SOLAR ENERGY</span>
+                    <h1>Turn sunlight into
+                        <span>clean energy.</span>
+                    </h1>
+                    <p>
+                        Solar energy uses the power of sunlight
+                        to generate clean electricity for homes,
+                        businesses and communities.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#" class="#">Calculate Savings</a>
+                        <a href="#" class="#"> How It Works</a>
+                    </div>
+
+                    <div class="solar--stats">
+                        <div>
+                            <strong>365</strong>
+                            <span> Days of Sun</span>
+                        </div>
+
+                        <div>
+                            <strong>0%</strong>
+                            <span>Fuel Required</span>
+                        </div>
+
+                        <div>
+                            <strong>25+</strong>
+                            <span> Years Lifespan</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- HOW SOLAR WORKS -->
+
+        <section class="how-section" id="how-it-works">
+            <div class="section-heading">
+                <span class="section-label">02 — HOW IT WORKS</span>
+                <h2>From sunlight
+                    <span>to electricity.</span>
+                    <p>
+
+                        Solar panels convert sunlight into
+                        usable electricity through a simple
+                        renewable energy process.
+
+                    </p>
+                </h2>
+            </div>
+
+            <div class="setps-grid">
+                <div class="steps-card">
+                    <div class="step-number">01</div>
+                    <h3>
+                        Sunlight
+                    </h3>
+                    <p>
+
+                        Solar panels capture sunlight
+                        using photovoltaic cells.
+
+                    </p>
+                </div>
+
+                <div class="steps-card">
+                    <div class="step-number">02</div>
+                    <h3>
+                        Electricity
+                    </h3> 
+                    <p>
+                    The photovoltaic cells convert
+                    sunlight into electrical energy.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="steps-card">
+                    <div class="step-number">03</div>
+                    <h3>
+                        Power Your Home
+                    </h3>
+                    
+                    <p>
+                    An inverter converts the electricity
+                    into power used by your appliances.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="steps-card">
+                    <div class="step-number">04</div>
+                    <h3>
+                        Clean Future
+                    </h3>
+                     <p>
+                    You use renewable electricity while
+                    reducing dependence on fossil fuels.
+                    </p>
+
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+
+        <section class="benefits-section">
+            <div class="section-container">
+                <div class="benefits-section">
+                    <div class="benefits-layout">
+
+                        <div class="benefits-content">
+                            <span class="section-label">03 — WHY SOLAR?</span>
+                            <h2>
+                                Energy that works
+                                <span>for the future.</span>
+                            </h2>
+                            <p>
+                                Solar energy offers a cleaner way
+                                to generate electricity while helping
+                                households reduce their dependence
+                                on traditional energy sources.
+                            </p>
+                            <a href="#" class="outline-btn">Check Your Savings</a>
+                        </div>
+
+
+
+                        <div class="benefits-grid">
+                            <div class="benefits-card">
+                                <h3>Clean Energy</h3>
+                                <p>
+                                    Generate electricity from
+                                    sunlight without burning fuel.
+                                </p>
+                            </div>
+
+                            <div class="benefit-card">
+
+                                <h3>Lower Bills</h3>
+                                <p>
+
+                                    Solar power can help reduce
+                                    electricity costs over time.
+
+                                </p>
+                            </div>
+
+                            <div class="benefits-card">
+                                <h3>
+                                    Long Lifespan
+                                </h3>
+
+
+                                <p>
+
+                                    Quality solar panels can operate
+                                    for many years with maintenance.
+
+                                </p>
+                            </div>
+
+                            <div class="benefit-card">
+                               <h3>
+                                    Planet Friendly
+                                </h3>
+                                <p>
+
+                                    Renewable electricity can help
+                                    reduce environmental impact.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            
+        </section>
+
+
+ <section class="types-section">
+    <div class="section-container">
+         <div class="section-heading center">
+            <div class="section-heading center">
+                <div class="section-heading center">
+                    <span class="section-label">
+
+                        04 — SOLAR TECHNOLOGY
+
+                    </span>
+                <h2>
+
+                        Different panels,
+
+                        <span>
+                            one clean goal.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+               <div class="types-grid">
+                 <div class="type-card">
+                    <div class="type-top">
+                       <span>
+                                01
+                            </span> 
+                    </div>
+            
+                        <h3>
+                            Monocrystalline
+                        </h3>
+<p>
+
+                            Made using high-purity silicon
+                            and known for efficient electricity
+                            generation.
+
+                        </p>
+  <div class="type-tag">
+                            HIGH EFFICIENCY
+                        </div>
+
+                 </div>
+
+                 <div class="type-card">
+                     <div class="type-top">
+                        <span>
+                                02
+                            </span>
+
+                     </div>
+                      <h3>
+                            Polycrystalline
+                        </h3>
+
+                      <p>
+
+                            Made from multiple silicon crystals
+                            and commonly used for residential
+                            installations.
+
+                        </p>
+                       <div class="type-tag">
+                            COST EFFECTIVE
+                       </div>    
+                 </div>
+
+                  <div class="type-card">
+                     <div class="type-top">
+
+                            <span>
+                                03
+                            </span>
+                        </div>
+
+                         <h3>
+                            Thin-Film
+                        </h3>
+
+
+                        <p>
+
+                            Lightweight solar technology that
+                            can be used for different surfaces
+                            and applications.
+
+                        </p>
+
+                        <div class="type-tag">
+                            FLEXIBLE
+                        </div>
+
+                  
+               
+            </div>
+         </div>
+    </div>
+
+
+
+
+ </section>
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>
