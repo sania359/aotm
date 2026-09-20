@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGen | Wind Power</title>
+   <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+
+    
+<style>
+:root {
+
+    --dark: #071A14;
+    --dark-2: #0D2920;
+    --green: #1D6B4D;
+    --green-light: #2D8A64;
+    --lime: #B7E65C;
+    --cream: #F4F7EF;
+    --white: #FFFFFF;
+    --gray: #66736D;
+    --light-green: #E8F3E9;
+    --border: #DCE5DD;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--dark);
+    background: var(--cream);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+.navbar {
+    width: 100%;
+    background: var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo > span:last-child > span {
+   color: var(--lime);
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--lime);
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #B8C5BE;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--lime);
+}
+
+.nav-btn {
+    padding: 11px 18px;
+    background: var(--lime);
+    color: var(--dark);
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.menu-btn {
+   display: none;
+   background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
+.section-label {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1;
+    margin-top: 15px;
+}
+
+.section-heading h2 span {
+    color: var(--green);
+}
+
+.section-heading p {
+    max-width: 420px;
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.section-heading.center {
+    display: block;
+    text-align: center;
+}
+
+.section-heading.center p {
+    margin: 20px auto 0;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.eyebrow {
+    display: flex;
+  align-items: center;
+   gap: 10px;
+    color: var(--lime);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.eyebrow span {
+    width: 35px;
+    height: 2px;
+    background: var(--lime);
+}
+
+.hero-content h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 0.98;
+}
+
+.hero-content h1 span {
+   display: block;
+    color: var(--lime);
+}
+
+.hero-content > p {
+    max-width: 560px;
+    margin: 28px 0;
+    color: #B7C4BE;
+   line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.wind-stats {
+    display: flex;
+    gap: 45px;
+   margin-top: 55px;
+}
+
+.wind-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.wind-stats strong {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 24px;
+}
+
+.wind-stats span {
+    color: #87968F;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+
+<body>
+
+
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                </span>
+
+                <span>
+                    ECO<span>GEN</span>
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="solar.html">
+                    Solar
+                </a>
+
+                <a href="wind.html" class="active">
+                    Wind
+                </a>
+
+                <a href="green.html">
+                    Green Lifestyle
+                </a>
+
+                <a href="impact.html">
+                    Energy Impact
+                </a>
+
+            </nav>
+
+
+            <!-- BUTTON -->
+
+            <a href="#wind-data" class="nav-btn">
+
+                Explore Data
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    
+
+    <main>
+
+
+        <section class="wind-hero">
+
+
+            <div class="hero-container">
+
+
+                <!-- LEFT CONTENT -->
+
+                <div class="hero-content">
+
+
+                    <div class="eyebrow">
+
+                        <span></span>
+
+                        02 — WIND POWER
+
+                    </div>
+
+
+                    <h1>
+
+                        Let the wind
+
+                        <span>
+                            power tomorrow.
+                        </span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Wind energy transforms the natural movement
+                        of air into clean electricity — creating power
+                        without burning fossil fuels.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+
+                        <a
+                            href="#how-it-works"
+                            class="primary-btn">
+
+                            How It Works
+
+                            <i class="fa-solid fa-arrow-down"></i>
+
+                        </a>
+
+
+                        <a
+                            href="#wind-data"
+                            class="secondary-btn">
+
+                            View Wind Data
+
+                            <i class="fa-solid fa-chart-column"></i>
+
+                        </a>
+
+
+                    </div>
+
+
+                    <!-- STATS -->
+
+                    <div class="wind-stats">
+
+
+                        <div>
+
+                            <strong>
+                                24/7
+                            </strong>
+
+                            <span>
+                                Natural Resource
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                0
+                            </strong>
+
+                            <span>
+                                Fuel Required
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                CLEAN
+                            </strong>
+
+                            <span>
+                                Energy Source
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+               
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             HOW WIND ENERGY WORKS
+        ================================================== -->
+
+        <section
+            class="how-section"
+            id="how-it-works">
+
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <span class="section-label">
+
+                            01 — HOW IT WORKS
+
+                        </span>
+
+
+                        <h2>
+
+                            From moving air
+
+                            <span>
+                                to clean power.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Wind turbines use the movement of air
+                        to rotate blades and generate electricity.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- STEPS -->
+
+                <div class="steps-grid">
+
+
+                    <!-- STEP 1 -->
+
+                    <div class="step-card">
+
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+
+                        <div class="step-icon">
+
+                            <i class="fa-solid fa-wind"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Wind Moves
+                        </h3>
+
+
+                        <p>
+
+                            Moving air creates kinetic energy
+                            that can be captured by turbines.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- STEP 2 -->
+
+                    <div class="step-card">
+
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+
+                        <div class="step-icon">
+
+                            <i class="fa-solid fa-fan"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Blades Rotate
+                        </h3>
+
+
+                        <p>
+
+                            Wind pushes the turbine blades
+                            and makes them spin.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- STEP 3 -->
+
+                    <div class="step-card">
+
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+
+                        <div class="step-icon">
+
+                            <i class="fa-solid fa-gears"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Generator Works
+                        </h3>
+
+
+                        <p>
+
+                            Mechanical movement drives a
+                            generator to produce electricity.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- STEP 4 -->
+
+                    <div class="step-card">
+
+
+                        <div class="step-number">
+                            04
+                        </div>
+
+
+                        <div class="step-icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Power Delivered
+                        </h3>
+
+
+                        <p>
+
+                            Generated electricity can be
+                            supplied to homes and businesses.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             TURBINE COMPONENTS
+        ================================================== -->
+
+        <section class="components-section">
+
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <span class="section-label">
+
+                            02 — TURBINE ANATOMY
+
+                        </span>
+
+
+                        <h2>
+
+                            Meet the parts
+
+                            <span>
+                                behind the power.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Every part of a wind turbine has an
+                        important role in converting wind into energy.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="components-layout">
+
+
+                    <!-- TURBINE VISUAL -->
+
+                    <div class="large-turbine">
+
+
+                        <div class="large-blades">
+
+                            <span class="large-blade lb-one"></span>
+
+                            <span class="large-blade lb-two"></span>
+
+                            <span class="large-blade lb-three"></span>
+
+                        </div>
+
+
+                        <div class="large-hub"></div>
+
+                        <div class="large-tower"></div>
+
+
+                    </div>
+
+
+
+                    
+
+
+
+        
+
+
+
+    <!-- JavaScript -->
+
+    <script src="wind.js"></script>
+
+
+</body>
+
+</html>
