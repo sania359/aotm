@@ -481,7 +481,82 @@ input {
 
 
 
-               
+                <!-- RIGHT VISUAL -->
+
+                <div class="wind-visual">
+
+
+                    <!-- CLOUDS -->
+
+                    <div class="cloud cloud-one">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+
+
+                    <div class="cloud cloud-two">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+
+
+                    <!-- WIND LINES -->
+
+                    <div class="wind-lines">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <!-- TURBINE -->
+
+                    <div class="turbine">
+
+
+                        <!-- BLADES -->
+
+                        <div class="blades">
+
+                            <span class="blade blade-one"></span>
+
+                            <span class="blade blade-two"></span>
+
+                            <span class="blade blade-three"></span>
+
+                        </div>
+
+
+                        <!-- HUB -->
+
+                        <div class="hub"></div>
+
+
+                        <!-- TOWER -->
+
+                        <div class="tower"></div>
+
+
+                    </div>
+
+
+                    <!-- ENERGY BADGE -->
+
+                    <div class="wind-badge">
+
+                        <i class="fa-solid fa-wind"></i>
+
+                        <div>
+
+                            <small>
+                                WIND POWER
+                            </small>
+
+                            <strong>
+                                CLEAN ENERGY
+                            </strong>
+
+                        </div>
 
                     </div>
 
@@ -770,11 +845,848 @@ input {
 
 
 
-                    
+                    <!-- COMPONENT LIST -->
+
+                    <div class="component-list">
+
+
+                        <div class="component-item">
+
+
+                            <div class="component-number">
+                                01
+                            </div>
+
+
+                            <div>
+
+                                <h3>
+                                    Rotor Blades
+                                </h3>
+
+                                <p>
+
+                                    Large blades capture
+                                    energy from moving wind.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
 
 
 
-        
+                        <div class="component-item">
+
+
+                            <div class="component-number">
+                                02
+                            </div>
+
+
+                            <div>
+
+                                <h3>
+                                    Nacelle
+                                </h3>
+
+                                <p>
+
+                                    The housing at the top contains
+                                    important mechanical components.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="component-item">
+
+
+                            <div class="component-number">
+                                03
+                            </div>
+
+
+                            <div>
+
+                                <h3>
+                                    Tower
+                                </h3>
+
+                                <p>
+
+                                    The tower supports the turbine
+                                    and places it higher into the wind.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="component-item">
+
+
+                            <div class="component-number">
+                                04
+                            </div>
+
+
+                            <div>
+
+                                <h3>
+                                    Generator
+                                </h3>
+
+                                <p>
+
+                                    The generator converts mechanical
+                                    energy into electrical energy.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             WIND DATA
+        ================================================== -->
+
+        <section
+            class="wind-data-section"
+            id="wind-data">
+
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <span class="section-label">
+
+                            03 — WIND DATA
+
+                        </span>
+
+
+                        <h2>
+
+                            See the wind
+
+                            <span>
+                                in motion.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        This simple interactive visualization
+                        shows how changing wind speeds can affect
+                        turbine activity.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- DATA DASHBOARD -->
+
+                <div class="data-dashboard">
+
+
+                    <!-- CURRENT SPEED -->
+
+                    <div class="current-speed">
+
+
+                        <span>
+                            CURRENT WIND SPEED
+                        </span>
+
+
+                        <div class="speed-value">
+
+                            <strong id="speedValue">
+                                12
+                            </strong>
+
+                            <small>
+                                km/h
+                            </small>
+
+                        </div>
+
+
+                        <p id="windStatus">
+                            Moderate Wind
+                        </p>
+
+
+                        <button
+                            id="windButton"
+                            class="wind-control">
+
+                            Change Wind Speed
+
+                            <i class="fa-solid fa-rotate"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- BAR VISUALIZATION -->
+
+                    <div class="wind-chart">
+
+
+                        <div class="chart-title">
+
+                            <span>
+                                WIND SPEED
+                            </span>
+
+                            <span>
+                                LAST 7 READINGS
+                            </span>
+
+                        </div>
+
+
+                        <div class="bars">
+
+
+                            <div class="bar-column">
+
+                                <div
+                                    class="bar"
+                                    style="height: 45%;">
+                                </div>
+
+                                <span>
+                                    Mon
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-column">
+
+                                <div
+                                    class="bar"
+                                    style="height: 65%;">
+                                </div>
+
+                                <span>
+                                    Tue
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-column">
+
+                                <div
+                                    class="bar"
+                                    style="height: 50%;">
+                                </div>
+
+                                <span>
+                                    Wed
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-column">
+
+                                <div
+                                    class="bar"
+                                    style="height: 80%;">
+                                </div>
+
+                                <span>
+                                    Thu
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-column">
+
+                                <div
+                                    class="bar"
+                                    style="height: 70%;">
+                                </div>
+
+                                <span>
+                                    Fri
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-column">
+
+                                <div
+                                    class="bar"
+                                    style="height: 90%;">
+                                </div>
+
+                                <span>
+                                    Sat
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-column">
+
+                                <div
+                                    class="bar"
+                                    style="height: 60%;">
+                                </div>
+
+                                <span>
+                                    Sun
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             BENEFITS
+        ================================================== -->
+
+        <section class="benefits-section">
+
+
+            <div class="section-container">
+
+
+                <div class="section-heading center">
+
+
+                    <span class="section-label">
+
+                        04 — WHY WIND ENERGY?
+
+                    </span>
+
+
+                    <h2>
+
+                        Power that works
+
+                        <span>
+                            with nature.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <div class="benefits-grid">
+
+
+                    <div class="benefit-card">
+
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-leaf"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Clean Energy
+                        </h3>
+
+
+                        <p>
+
+                            Wind turbines generate electricity
+                            without burning fuel during operation.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="benefit-card">
+
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-recycle"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Renewable
+                        </h3>
+
+
+                        <p>
+
+                            Wind is a naturally replenished
+                            source of energy.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="benefit-card">
+
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-earth-americas"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Lower Emissions
+                        </h3>
+
+
+                        <p>
+
+                            Wind power can help reduce dependence
+                            on fossil-fuel-based electricity.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="benefit-card">
+
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Scalable Power
+                        </h3>
+
+
+                        <p>
+
+                            Wind farms can contain many turbines
+                            working together to produce electricity.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             WIND FACTS
+        ================================================== -->
+
+        <section class="facts-section">
+
+
+            <div class="section-container">
+
+
+                <div class="facts-box">
+
+
+                    <div class="facts-title">
+
+
+                        <span class="section-label">
+
+                            05 — QUICK FACTS
+
+                        </span>
+
+
+                        <h2>
+
+                            The power of
+
+                            <span>
+                                moving air.
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+
+                            Wind has been used by humans for
+                            centuries and modern turbines have
+                            transformed it into electricity.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="fact-numbers">
+
+
+                        <div>
+
+                            <strong>
+                                3
+                            </strong>
+
+                            <span>
+                                Main turbine blades
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                360°
+                            </strong>
+
+                            <span>
+                                Turbine direction
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                24/7
+                            </strong>
+
+                            <span>
+                                Natural wind potential
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="wind-cta">
+
+
+            <div class="cta-content">
+
+
+                <span class="section-label">
+
+                    NEXT — GREEN LIFESTYLE
+
+                </span>
+
+
+                <h2>
+
+                    Clean energy is
+
+                    <span>
+                        only the beginning.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Discover simple everyday habits that can
+                    make your lifestyle more sustainable.
+
+                </p>
+
+
+                <a
+                    href="green.html"
+                    class="primary-btn dark">
+
+                    Live Greener
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+
+        <div class="footer-container">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo">
+
+
+                    <span class="logo-icon">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                    </span>
+
+
+                    <span>
+
+                        ECO<span>GEN</span>
+
+                    </span>
+
+
+                </a>
+
+
+                <p>
+
+                    Powering a cleaner future through
+                    renewable energy and sustainable choices.
+
+                </p>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div class="social-icons">
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="X">
+
+                        <i class="fa-brands fa-x-twitter"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- LINKS -->
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <h4>
+                        EXPLORE
+                    </h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="solar.html">
+                        Solar Energy
+                    </a>
+
+                    <a href="wind.html">
+                        Wind Power
+                    </a>
+
+                    <a href="green.html">
+                        Green Lifestyle
+                    </a>
+
+                    <a href="impact.html">
+                        Energy Impact
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        CONNECT
+                    </h4>
+
+                    <a href="#">
+                        Contact Us
+                    </a>
+
+                    <a href="#">
+                        Email
+                    </a>
+
+                    <a href="#">
+                        Newsletter
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ECOGEN
+            </span>
+
+            <span>
+                DESIGNED FOR A GREENER FUTURE 🌱
+            </span>
+
+        </div>
+
+
+    </footer>
 
 
 
