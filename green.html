@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoGen | Green Lifestyle</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+:root {
+    --dark: #071A14;
+    --dark-2: #0D2920;
+    --green: #1D6B4D;
+    --green-light: #2D8A64;
+    --lime: #B7E65C;
+    --cream: #F4F7EF;
+    --white: #FFFFFF;
+    --gray: #66736D;
+    --light-green: #E8F3E9;
+    --border: #DCE5DD;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--dark);
+    background: var(--cream);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+.navbar {
+    width: 100%;
+    background: var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo > span:last-child > span {
+    color: var(--lime);
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--lime);
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #B8C5BE;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--lime);
+}
+
+.nav-btn {
+    padding: 11px 18px;
+    background: var(--lime);
+    color: var(--dark);
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.menu-btn {
+    display: none;
+   background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
+.section-label {
+   color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+   font-family: "Space Grotesk", sans-serif;
+   font-size: clamp(38px, 5vw, 64px);
+    line-height: 1;
+    margin-top: 15px;
+}
+
+.section-heading h2 span {
+    color: var(--green);
+}
+
+.section-heading p {
+    max-width: 420px;
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.section-heading.center {
+    display: block;
+    text-align: center;
+}
+
+.section-heading.center p {
+     margin: 20px auto 0;
+}
+
+.green-hero {
+
+    min-height: 720px;
+
+    background: var(--dark);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+.hero-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 90px 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+.eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--lime);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 22px;
+
+}
+
+.eyebrow span {
+
+    width: 35px;
+
+    height: 2px;
+
+    background: var(--lime);
+
+}
+
+
+.hero-content h1 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 0.98;
+
+}
+
+.hero-content h1 span {
+
+    display: block;
+
+    color: var(--lime);
+
+}
+
+
+.hero-content > p {
+
+    max-width: 560px;
+
+    margin: 28px 0;
+
+    color: #B7C4BE;
+
+    line-height: 1.7;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+.green-stats {
+
+    display: flex;
+
+    gap: 45px;
+
+    margin-top: 55px;
+
+}
+
+
+.green-stats div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.green-stats strong {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 23px;
+
+}
+
+.green-stats span {
+
+    color: #87968F;
+
+    font-size: 12px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         NAVBAR
+    ================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                </span>
+
+                <span>
+                    ECO<span>GEN</span>
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="solar.html">
+                    Solar
+                </a>
+
+                <a href="wind.html">
+                    Wind
+                </a>
+
+                <a href="green.html" class="active">
+                    Green Lifestyle
+                </a>
+
+                <a href="impact.html">
+                    Energy Impact
+                </a>
+
+            </nav>
+
+
+            <!-- BUTTON -->
+
+            <a href="#tips" class="nav-btn">
+
+                Green Tips
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         MAIN
+    ================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="green-hero">
+
+
+            <div class="hero-container">
+
+
+                <!-- LEFT -->
+
+                <div class="hero-content">
+
+
+                    <div class="eyebrow">
+
+                        <span></span>
+
+                        03 — GREEN LIFESTYLE
+
+                    </div>
+
+
+                    <h1>
+
+                        Live lighter.
+
+                        <span>
+                            Think greener.
+                        </span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Sustainability starts with everyday choices.
+                        From reducing waste to saving energy, small
+                        habits can create a meaningful difference.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+
+                        <a
+                            href="#tips"
+                            class="primary-btn">
+
+                            Explore Green Tips
+
+                            <i class="fa-solid fa-arrow-down"></i>
+
+                        </a>
+
+
+                        <a
+                            href="#footprint"
+                            class="secondary-btn">
+
+                            Reduce Your Impact
+
+                            <i class="fa-solid fa-leaf"></i>
+
+                        </a>
+
+
+                    </div>
+
+
+                    <!-- MINI STATS -->
+
+                    <div class="green-stats">
+
+
+                        <div>
+
+                            <strong>
+                                LESS
+                            </strong>
+
+                            <span>
+                                Waste
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                MORE
+                            </strong>
+
+                            <span>
+                                Reuse
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                BETTER
+                            </strong>
+
+                            <span>
+                                Choices
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- RIGHT VISUAL -->
+
+                <div class="green-visual">
+
+
+                    <div class="leaf-glow"></div>
+
+
+                    <!-- MAIN LEAF -->
+
+                    <div class="main-leaf">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                    </div>
+
+
+                    <!-- FLOATING CARDS -->
+
+                    <div class="floating-card card-recycle">
+
+
+                        <div class="floating-icon">
+
+                            <i class="fa-solid fa-recycle"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                REUSE
+                            </small>
+
+                            <strong>
+                                Recycle More
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="floating-card card-energy">
+
+
+                        <div class="floating-icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                ENERGY
+                            </small>
+
+                            <strong>
+                                Save Power
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="floating-card card-water">
+
+
+                        <div class="floating-icon">
+
+                            <i class="fa-solid fa-droplet"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                WATER
+                            </small>
+
+                            <strong>
+                                Use Wisely
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- DECORATIVE DOTS -->
+
+                    <span class="dot dot-one"></span>
+                    <span class="dot dot-two"></span>
+                    <span class="dot dot-three"></span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
+        <section class="intro-section">
+
+
+            <div class="section-container">
+
+
+                <div class="intro-layout">
+
+
+                    <div>
+
+                        <span class="section-label">
+
+                            01 — EVERYDAY SUSTAINABILITY
+
+                        </span>
+
+
+                        <h2>
+
+                            You don't need to
+
+                            <span>
+                                change everything.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <div>
+
+                        <p>
+
+                            A green lifestyle is about making
+                            thoughtful choices every day. Switching
+                            off unused lights, carrying reusable
+                            bags, reducing food waste and choosing
+                            sustainable products are simple places
+                            to begin.
+
+                        </p>
+
+
+                        <p>
+
+                            The goal isn't perfection. It's progress.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             GREEN TIPS
+        ================================================== -->
+
+        <section
+            class="tips-section"
+            id="tips">
+
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <span class="section-label">
+
+                            02 — GREEN TIPS
+
+                        </span>
+
+
+                        <h2>
+
+                            Small habits.
+
+                            <span>
+                                Big difference.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Start with simple changes that fit naturally
+                        into your everyday routine.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- TIP CARDS -->
+
+                <div class="tips-grid">
+
+
+                    <!-- ENERGY -->
+
+                    <article class="tip-card">
+
+
+                        <div class="tip-top">
+
+                            <span>
+                                01
+                            </span>
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+
+                        <div class="tip-icon">
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Save Energy
+                        </h3>
+
+
+                        <p>
+
+                            Switch off lights, fans and devices
+                            when they are not being used.
+
+                        </p>
+
+
+                        <div class="tip-tag">
+                            ENERGY
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- RECYCLING -->
+
+                    <article class="tip-card">
+
+
+                        <div class="tip-top">
+
+                            <span>
+                                02
+                            </span>
+
+                            <i class="fa-solid fa-recycle"></i>
+
+                        </div>
+
+
+                        <div class="tip-icon">
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Recycle More
+                        </h3>
+
+
+                        <p>
+
+                            Separate recyclable materials and
+                            reuse items whenever possible.
+
+                        </p>
+
+
+                        <div class="tip-tag">
+                            WASTE
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- WATER -->
+
+                    <article class="tip-card">
+
+
+                        <div class="tip-top">
+
+                            <span>
+                                03
+                            </span>
+
+                            <i class="fa-solid fa-droplet"></i>
+
+                        </div>
+
+
+                        <div class="tip-icon">
+
+                            <i class="fa-solid fa-faucet-drip"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Save Water
+                        </h3>
+
+
+                        <p>
+
+                            Turn off the tap when you don't need
+                            running water.
+
+                        </p>
+
+
+                        <div class="tip-tag">
+                            WATER
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- TRAVEL -->
+
+                    <article class="tip-card">
+
+
+                        <div class="tip-top">
+
+                            <span>
+                                04
+                            </span>
+
+                            <i class="fa-solid fa-bicycle"></i>
+
+                        </div>
+
+
+                        <div class="tip-icon">
+
+                            <i class="fa-solid fa-person-walking"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Travel Smart
+                        </h3>
+
+
+                        <p>
+
+                            Walk, cycle or use public transport
+                            when practical.
+
+                        </p>
+
+
+                        <div class="tip-tag">
+                            TRAVEL
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- FOOD -->
+
+                    <article class="tip-card">
+
+
+                        <div class="tip-top">
+
+                            <span>
+                                05
+                            </span>
+
+                            <i class="fa-solid fa-utensils"></i>
+
+                        </div>
+
+
+                        <div class="tip-icon">
+
+                            <i class="fa-solid fa-apple-whole"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Reduce Food Waste
+                        </h3>
+
+
+                        <p>
+
+                            Plan meals, store food properly and
+                            use leftovers creatively.
+
+                        </p>
+
+
+                        <div class="tip-tag">
+                            FOOD
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- SHOPPING -->
+
+                    <article class="tip-card">
+
+
+                        <div class="tip-top">
+
+                            <span>
+                                06
+                            </span>
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </div>
+
+
+                        <div class="tip-icon">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Shop Mindfully
+                        </h3>
+
+
+                        <p>
+
+                            Choose durable products and avoid
+                            unnecessary purchases.
+
+                        </p>
+
+
+                        <div class="tip-tag">
+                            SHOPPING
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CARBON FOOTPRINT
+        ================================================== -->
+
+        <section
+            class="footprint-section"
+            id="footprint">
+
+
+            <div class="section-container">
+
+
+                <div class="footprint-layout">
+
+
+                    <!-- TEXT -->
+
+                    <div class="footprint-content">
+
+
+                        <span class="section-label">
+
+                            03 — CARBON FOOTPRINT
+
+                        </span>
+
+
+                        <h2>
+
+                            Understand your
+
+                            <span>
+                                impact.
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+
+                            A carbon footprint represents the
+                            greenhouse gas emissions associated
+                            with everyday activities such as
+                            electricity use, transportation and
+                            consumption.
+
+                        </p>
+
+
+                        <div class="footprint-points">
+
+
+                            <div>
+
+                                <i class="fa-solid fa-house"></i>
+
+                                <span>
+                                    Home Energy
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-car"></i>
+
+                                <span>
+                                    Transportation
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-bag-shopping"></i>
+
+                                <span>
+                                    Consumption
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- IMPACT CIRCLE -->
+
+                    <div class="footprint-visual">
+
+
+                        <div class="footprint-circle">
+
+
+                            <div>
+
+                                <i class="fa-solid fa-earth-americas"></i>
+
+                                <strong>
+                                    LOWER
+                                </strong>
+
+                                <span>
+                                    YOUR IMPACT
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="orbit orbit-one"></div>
+
+                        <div class="orbit orbit-two"></div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECYCLING GUIDE
+        ================================================== -->
+
+        <section class="recycling-section">
+
+
+            <div class="section-container">
+
+
+                <div class="section-heading center">
+
+
+                    <span class="section-label">
+
+                        04 — RECYCLING GUIDE
+
+                    </span>
+
+
+                    <h2>
+
+                        Give everyday items
+
+                        <span>
+                            another life.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Learn what common materials can
+                        potentially be recycled or reused.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="recycling-grid">
+
+
+                    <!-- PAPER -->
+
+                    <div class="recycling-card">
+
+
+                        <div class="recycling-icon">
+
+                            <i class="fa-solid fa-file-lines"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Paper
+                        </h3>
+
+
+                        <p>
+                            Newspapers, cardboard and
+                            many clean paper products.
+                        </p>
+
+
+                        <span class="recycle-label">
+                            RECYCLABLE
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- GLASS -->
+
+                    <div class="recycling-card">
+
+
+                        <div class="recycling-icon">
+
+                            <i class="fa-solid fa-wine-bottle"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Glass
+                        </h3>
+
+
+                        <p>
+                            Glass bottles and jars can often
+                            be recycled through local systems.
+                        </p>
+
+
+                        <span class="recycle-label">
+                            RECYCLABLE
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- METAL -->
+
+                    <div class="recycling-card">
+
+
+                        <div class="recycling-icon">
+
+                            <i class="fa-solid fa-cube"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Metal
+                        </h3>
+
+
+                        <p>
+                            Many aluminium and steel containers
+                            can be recovered and recycled.
+                        </p>
+
+
+                        <span class="recycle-label">
+                            RECYCLABLE
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- PLASTIC -->
+
+                    <div class="recycling-card">
+
+
+                        <div class="recycling-icon">
+
+                            <i class="fa-solid fa-bottle-water"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Plastic
+                        </h3>
+
+
+                        <p>
+                            Recycling availability depends on
+                            the plastic type and local facilities.
+                        </p>
+
+
+                        <span class="recycle-label">
+                            CHECK LOCALLY
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             DAILY CHALLENGE
+        ================================================== -->
+
+        <section class="challenge-section">
+
+
+            <div class="challenge-box">
+
+
+                <div class="challenge-content">
+
+
+                    <span class="section-label">
+
+                        05 — TODAY'S CHALLENGE
+
+                    </span>
+
+
+                    <h2>
+
+                        One green action
+
+                        <span>
+                            starts today.
+                        </span>
+
+                    </h2>
+
+
+                    <p id="challengeText">
+
+                        Click the button to discover
+                        a simple eco-friendly action.
+
+                    </p>
+
+
+                    <button
+                        class="challenge-btn"
+                        id="challengeBtn">
+
+                        Give Me a Challenge
+
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+
+                    </button>
+
+
+                </div>
+
+
+                <div class="challenge-icon">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="green-cta">
+
+
+            <div class="cta-content">
+
+
+                <span class="section-label">
+
+                    NEXT — ENERGY IMPACT
+
+                </span>
+
+
+                <h2>
+
+                    Every choice
+
+                    <span>
+                        leaves a mark.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    See how renewable energy and sustainable
+                    choices can contribute to a cleaner future.
+
+                </p>
+
+
+                <a
+                    href="impact.html"
+                    class="primary-btn dark">
+
+                    Explore Energy Impact
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+
+        <div class="footer-container">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo">
+
+
+                    <span class="logo-icon">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                    </span>
+
+
+                    <span>
+
+                        ECO<span>GEN</span>
+
+                    </span>
+
+
+                </a>
+
+
+                <p>
+
+                    Powering a cleaner future through
+                    renewable energy and sustainable choices.
+
+                </p>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div class="social-icons">
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="X">
+
+                        <i class="fa-brands fa-x-twitter"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- LINKS -->
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <h4>
+                        EXPLORE
+                    </h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="solar.html">
+                        Solar Energy
+                    </a>
+
+                    <a href="wind.html">
+                        Wind Power
+                    </a>
+
+                    <a href="green.html">
+                        Green Lifestyle
+                    </a>
+
+                    <a href="impact.html">
+                        Energy Impact
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        CONNECT
+                    </h4>
+
+                    <a href="#">
+                        Contact Us
+                    </a>
+
+                    <a href="#">
+                        Email
+                    </a>
+
+                    <a href="#">
+                        Newsletter
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ECOGEN
+            </span>
+
+            <span>
+                DESIGNED FOR A GREENER FUTURE 🌱
+            </span>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="js/green.js"></script>
+
+
+</body>
+
+</html>
