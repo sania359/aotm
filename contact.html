@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoGen | Contact</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family: "DM Sans", sans-serif;
+
+            background: #F4F7EF;
+
+            color: #071A14;
+
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+
+            background: #071A14;
+
+            padding: 18px 7%;
+
+        }
+
+
+        .nav-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 25px;
+
+            font-weight: 700;
+
+        }
+
+
+        .logo span {
+
+            color: #B7E65C;
+
+        }
+
+
+        /* NAV LINKS */
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+        }
+
+
+        .nav-links a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: #B7E65C;
+
+        }
+
+
+        .nav-links a.active {
+
+            color: #B7E65C;
+
+        }
+
+
+        /* EXPLORE BUTTON */
+
+        .nav-btn {
+
+            background: #B7E65C;
+
+            color: #071A14;
+
+            text-decoration: none;
+
+            padding: 11px 17px;
+
+            border-radius: 5px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+
+        .nav-btn:hover {
+
+            background: white;
+
+        }
+
+
+        /* MENU BUTTON */
+
+        .menu-btn {
+
+            display: none;
+
+            background: none;
+
+            border: none;
+
+            color: white;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+        }
+
+
+        .menu-btn .fa-xmark {
+
+            display: none;
+
+        }
+
+
+        .menu-btn.open .fa-bars {
+
+            display: none;
+
+        }
+
+
+        .menu-btn.open .fa-xmark {
+
+            display: block;
+
+        }
+
+
+        /* =========================
+           CONTACT SECTION
+        ========================= */
+
+        .contact-section {
+
+            max-width: 900px;
+
+            margin: 70px auto;
+
+            padding: 0 25px;
+
+        }
+
+
+        .contact-heading {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        .contact-heading span {
+
+            color: #1D6B4D;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .contact-heading h1 {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 44px;
+
+            margin: 10px 0;
+
+        }
+
+
+        .contact-heading p {
+
+            color: #666;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =========================
+           CONTACT FORM
+        ========================= */
+
+        .contact-box {
+
+            background: white;
+
+            max-width: 700px;
+
+            margin: auto;
+
+            padding: 35px;
+
+            border-radius: 12px;
+
+            box-shadow:
+
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+        }
+
+
+        .contact-box label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+        }
+
+
+        .contact-box input,
+        .contact-box textarea {
+
+            width: 100%;
+
+            padding: 13px;
+
+            margin-bottom: 20px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 6px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+
+            outline: none;
+
+        }
+
+
+        .contact-box input:focus,
+        .contact-box textarea:focus {
+
+            border-color: #1D6B4D;
+
+        }
+
+
+        .contact-box textarea {
+
+            height: 120px;
+
+            resize: none;
+
+        }
+
+
+        .contact-box button {
+
+            background: #1D6B4D;
+
+            color: white;
+
+            border: none;
+
+            padding: 13px 25px;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+        }
+
+
+        .contact-box button:hover {
+
+            background: #B7E65C;
+
+            color: #071A14;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background: #071A14;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            margin-top: 70px;
+
+        }
+
+
+        footer p {
+
+            font-size: 13px;
+
+            color: #ddd;
+
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .nav-links {
+
+                position: absolute;
+
+                top: 74px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: #071A14;
+
+                padding: 25px 30px;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 20px;
+
+                border-top: 1px solid
+                    rgba(255,255,255,0.1);
+
+                z-index: 10;
+
+            }
+
+
+            .nav-btn {
+
+                display: none;
+
+            }
+
+
+            .menu-btn {
+
+                display: block;
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .navbar {
+
+                padding: 18px 5%;
+
+            }
+
+
+            .contact-section {
+
+                margin: 50px auto;
+
+            }
+
+
+            .contact-heading h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .contact-box {
+
+                padding: 25px;
+
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .contact-heading h1 {
+
+                font-size: 28px;
+
+            }
+
+
+            .contact-heading p {
+
+                font-size: 14px;
+
+            }
+
+
+            .contact-box {
+
+                padding: 20px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <span>Eco</span>Gen
+
+            </a>
+
+
+            <!-- NAV LINKS -->
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="solar.html">
+                    Solar
+                </a>
+
+                <a href="wind.html">
+                    Wind
+                </a>
+
+                <a href="green.html">
+                    Green Lifestyle
+                </a>
+
+                <a href="impact.html">
+                    Energy Impact
+                </a>
+
+                <a href="contact.html" class="active">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- EXPLORE BUTTON -->
+
+            <a href="impact.html" class="nav-btn">
+
+                Explore Impact
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button class="menu-btn" id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================= -->
+
+    <section class="contact-section">
+
+
+        <div class="contact-heading">
+
+            <span>
+                GET IN TOUCH
+            </span>
+
+
+            <h1>
+                Contact EcoGen
+            </h1>
+
+
+            <p>
+                Have a question about sustainable energy?
+                Send us a message.
+            </p>
+
+        </div>
+
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-box">
+
+            <form>
+
+
+                <label>
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter your name">
+
+
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email">
+
+
+
+                <label>
+                    Message
+                </label>
+
+                <textarea
+                    placeholder="Write your message"></textarea>
+
+
+
+                <button type="submit">
+
+                    Send Message
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 EcoGen | Sustainable Energy
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         MENU JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        var menuBtn =
+            document.getElementById("menuBtn");
+
+        var navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.onclick = function () {
+
+
+            if (navLinks.style.display == "flex") {
+
+                navLinks.style.display = "none";
+
+                menuBtn.className =
+                    "menu-btn";
+
+            }
+
+            else {
+
+                navLinks.style.display = "flex";
+
+                menuBtn.className =
+                    "menu-btn open";
+
+            }
+
+        };
+
+    </script>
+
+
+</body>
+
+</html>
