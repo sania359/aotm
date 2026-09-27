@@ -625,73 +625,18 @@
             overflow: hidden;
         }
 
-        .large-tower {
-            position: absolute;
-            width: 48px;
-            height: 350px;
-            left: 50%;
-            bottom: -10px;
-            transform: translateX(-50%);
-            background: linear-gradient(90deg, #56645D, #E0E5E1, #56645D);
-            clip-path: polygon(35% 0, 65% 0, 100% 100%, 0 100%);
+        .image-turbine {
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            background: var(--dark);
         }
 
-        .large-hub {
-            position: absolute;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: var(--lime);
-            left: 50%;
-            top: 120px;
-            transform: translateX(-50%);
-            z-index: 5;
-        }
-
-        .large-blades {
-            position: absolute;
-            width: 280px;
-            height: 280px;
-            left: 50%;
-            top: 8px;
-            transform: translateX(-50%);
-            animation: rotateLarge 8s linear infinite;
-            z-index: 4;
-        }
-
-        @keyframes rotateLarge {
-
-            from {
-                transform: translateX(-50%) rotate(0);
-            }
-
-            to {
-                transform: translateX(-50%) rotate(360deg);
-            }
-
-        }
-
-        .large-blade {
-            position: absolute;
-            width: 27px;
-            height: 145px;
-            left: 50%;
-            top: 50%;
-            transform-origin: bottom center;
-            background: var(--lime);
-            border-radius: 100% 15% 100% 15%;
-        }
-
-        .lb-one {
-            transform: translate(-50%, -100%)rotate(0);
-        }
-
-        .lb-two {
-            transform: translate(-50%, -100%)rotate(120deg);
-        }
-
-        .lb-three {
-            transform: translate(-50%, -100%)rotate(240deg);
+        .image-turbine img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .component-list {
@@ -1508,7 +1453,7 @@
                     <div class="hero-buttons">
 
 
-                        <a href="#how-it-works" class="primary-btn">
+                        <a href="how-it-works" class="primary-btn">
 
                             How It Works
 
@@ -1915,27 +1860,12 @@
 
                     <!-- TURBINE VISUAL -->
 
-                    <div class="large-turbine">
+                    <div class="large-turbine image-turbine">
 
-
-                        <div class="large-blades">
-
-                            <span class="large-blade lb-one"></span>
-
-                            <span class="large-blade lb-two"></span>
-
-                            <span class="large-blade lb-three"></span>
-
-                        </div>
-
-
-                        <div class="large-hub"></div>
-
-                        <div class="large-tower"></div>
-
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1000&q=85"
+                            alt="Wind Turbine">
 
                     </div>
-
 
 
                     <!-- COMPONENT LIST -->
@@ -2139,19 +2069,11 @@
 
                         </div>
 
-
-                        <p id="windStatus">
+                        <p>
                             Moderate Wind
                         </p>
 
 
-                        <button id="windButton" class="wind-control">
-
-                            Change Wind Speed
-
-                            <i class="fa-solid fa-rotate"></i>
-
-                        </button>
 
 
                     </div>
@@ -2743,104 +2665,32 @@
 
     <!-- JavaScript -->
 
-   <script>
+    <!-- JavaScript -->
 
-var menuBtn = document.getElementById("menuBtn");
+    <script>
 
-var navLinks = document.getElementById("navLinks");
+        var menuBtn = document.getElementById("menuBtn");
 
-
-menuBtn.onclick = function () {
-
-    if (navLinks.style.display == "flex") {
-
-        navLinks.style.display = "none";
-
-    } else {
-
-        navLinks.style.display = "flex";
-
-    }
-
-};
+        var navLinks = document.getElementById("navLinks");
 
 
+        menuBtn.onclick = function () {
 
-var windButton =
-    document.getElementById("windButton");
+            if (navLinks.style.display == "flex") {
 
-var speedValue =
-    document.getElementById("speedValue");
+                navLinks.style.display = "none";
 
-var windStatus =
-    document.getElementById("windStatus");
+            }
 
+            else {
 
-var windSpeeds = [
-    8,
-    12,
-    16,
-    20,
-    25,
-    14,
-    18
-];
+                navLinks.style.display = "flex";
 
+            }
 
-var speedIndex = 1;
+        };
 
-
-windButton.onclick = function () {
-
-    speedIndex++;
-
-    if (speedIndex >= windSpeeds.length) {
-
-        speedIndex = 0;
-
-    }
-
-
-    var newSpeed =
-        windSpeeds[speedIndex];
-
-
-    speedValue.innerHTML =
-        newSpeed;
-
-
-    if (newSpeed < 10) {
-
-        windStatus.innerHTML =
-            "Light Wind";
-
-    }
-
-    else if (newSpeed < 18) {
-
-        windStatus.innerHTML =
-            "Moderate Wind";
-
-    }
-
-    else if (newSpeed < 23) {
-
-        windStatus.innerHTML =
-            "Strong Wind";
-
-    }
-
-    else {
-
-        windStatus.innerHTML =
-            "Very Strong Wind";
-
-    }
-
-};
-
-</script>
-
+    </script>
 
 </body>
 
