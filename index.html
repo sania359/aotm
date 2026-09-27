@@ -2,33 +2,1321 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>EcoGen | Sustainable Energy</title>
-    <!-- Google Fonts -->
+
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- =========================
+         FONT AWESOME
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =========================
+           BASIC
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #F4F7EF;
+            color: #071A14;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .navbar {
+            width: 100%;
+            background: #071A14;
+            padding: 18px 7%;
+            position: relative;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: white;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #B7E65C;
+            color: #071A14;
+
+            border-radius: 50%;
+
+            font-size: 16px;
+        }
+
+        .logo > span:last-child > span {
+            color: #B7E65C;
+        }
+
+
+        /* NAV LINKS */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+
+            font-size: 13px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #B7E65C;
+        }
+
+        .nav-links a.active {
+            color: #B7E65C;
+        }
+
+
+        /* NAV BUTTON */
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            background: #B7E65C;
+            color: #071A14;
+
+            padding: 11px 17px;
+
+            border-radius: 5px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: white;
+        }
+
+
+        /* MOBILE MENU BUTTON */
+
+        .menu-btn {
+            display: none;
+
+            border: none;
+            background: transparent;
+
+            color: white;
+
+            font-size: 22px;
+
+            cursor: pointer;
+        }
+
+        .menu-btn .fa-xmark {
+            display: none;
+        }
+
+        .menu-btn.open .fa-bars {
+            display: none;
+        }
+
+        .menu-btn.open .fa-xmark {
+            display: block;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 650px;
+
+            background: #071A14;
+
+            color: white;
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 80px 30px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 50px;
+        }
+
+
+        /* HERO CONTENT */
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #B7E65C;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+        .eyebrow span {
+            width: 28px;
+            height: 2px;
+
+            background: #B7E65C;
+        }
+
+        .hero h1 {
+            max-width: 600px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(45px, 6vw, 75px);
+
+            line-height: 1.02;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #B7E65C;
+        }
+
+        .hero-content > p {
+            max-width: 560px;
+
+            color: #B8C3BE;
+
+            line-height: 1.7;
+
+            font-size: 15px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* HERO BUTTONS */
+
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 13px 19px;
+
+            border-radius: 5px;
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .primary-btn {
+            background: #B7E65C;
+            color: #071A14;
+        }
+
+        .secondary-btn {
+            border: 1px solid #60736B;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: white;
+        }
+
+        .secondary-btn:hover {
+            border-color: #B7E65C;
+            color: #B7E65C;
+        }
+
+
+        /* MINI STATS */
+
+        .hero-mini-stats {
+            display: flex;
+            gap: 50px;
+
+            margin-top: 45px;
+        }
+
+        .hero-mini-stats div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hero-mini-stats strong {
+            color: #B7E65C;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 24px;
+        }
+
+        .hero-mini-stats span {
+            color: #9CA9A3;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           ENERGY VISUAL
+        ========================== */
+
+        .energy-visual {
+            min-height: 480px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .visual-glow {
+            width: 300px;
+            height: 300px;
+
+            background: rgba(183, 230, 92, 0.15);
+
+            border-radius: 50%;
+
+            filter: blur(40px);
+
+            position: absolute;
+        }
+
+
+        /* ORBITS */
+
+        .orbit {
+            position: absolute;
+
+            border: 1px solid rgba(183, 230, 92, 0.25);
+
+            border-radius: 50%;
+        }
+
+        .orbit-one {
+            width: 390px;
+            height: 390px;
+
+            transform: rotate(25deg);
+        }
+
+        .orbit-two {
+            width: 300px;
+            height: 300px;
+
+            transform: rotate(-30deg);
+        }
+
+
+        /* ENERGY CIRCLE */
+
+        .energy-circle {
+            width: 235px;
+            height: 235px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #B7E65C,
+                    #1D6B4D
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            z-index: 2;
+
+            box-shadow:
+                0 0 60px rgba(183, 230, 92, 0.25);
+        }
+
+        .circle-inner {
+            width: 185px;
+            height: 185px;
+
+            background: #071A14;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-direction: column;
+
+            gap: 4px;
+        }
+
+        .circle-inner i {
+            color: #B7E65C;
+
+            font-size: 28px;
+
+            margin-bottom: 8px;
+        }
+
+        .circle-inner span {
+            font-size: 10px;
+
+            letter-spacing: 3px;
+
+            color: #A9B5AF;
+        }
+
+        .circle-inner strong {
+            color: white;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 21px;
+        }
+
+
+        /* FLOATING CARDS */
+
+        .floating-card {
+            position: absolute;
+
+            background: white;
+
+            color: #071A14;
+
+            padding: 13px 16px;
+
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.25);
+
+            z-index: 5;
+        }
+
+        .solar-card {
+            top: 80px;
+            left: 10px;
+        }
+
+        .wind-card {
+            right: 0;
+            bottom: 90px;
+        }
+
+        .card-icon {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #EAF3D8;
+
+            border-radius: 6px;
+
+            color: #1D6B4D;
+        }
+
+        .floating-card div:last-child {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .floating-card small {
+            color: #777;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+        }
+
+        .floating-card strong {
+            font-size: 13px;
+        }
+
+
+        /* LEAVES */
+
+        .floating-leaf {
+            position: absolute;
+
+            color: #B7E65C;
+
+            opacity: 0.8;
+
+            font-size: 24px;
+        }
+
+        .leaf-one {
+            top: 40px;
+            right: 80px;
+        }
+
+        .leaf-two {
+            bottom: 40px;
+            left: 80px;
+        }
+
+
+        /* SCROLL */
+
+        .scroll-down {
+            position: absolute;
+
+            bottom: 25px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #8F9D97;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+        }
+
+        .scroll-down i {
+            color: #B7E65C;
+        }
+
+
+        /* =========================
+           ENERGY SECTION
+        ========================== */
+
+        .energy-section {
+            padding: 100px 7%;
+            background: #F4F7EF;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-heading {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: end;
+
+            margin-bottom: 45px;
+        }
+
+        .section-label {
+            color: #1D6B4D;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 42px;
+
+            line-height: 1.1;
+
+            margin-top: 12px;
+        }
+
+        .section-heading h2 span {
+            color: #1D6B4D;
+        }
+
+        .section-heading > p {
+            color: #68736E;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+
+        /* ENERGY GRID */
+
+        .energy-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .energy-card-solar,
+        .energy-card-wind,
+        .energy-card-green {
+
+            min-height: 300px;
+
+            padding: 28px;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: 0.3s;
+        }
+
+        .energy-card-solar {
+            background: #DCECC0;
+            color: #071A14;
+        }
+
+        .energy-card-wind {
+            background: #D5E5E0;
+            color: #071A14;
+        }
+
+        .energy-card-green {
+            background: #1D6B4D;
+            color: white;
+        }
+
+        .energy-card-solar:hover,
+        .energy-card-wind:hover,
+        .energy-card-green:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 70px;
+        }
+
+        .card-top span {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+        .energy-grid h3 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        .energy-grid p {
+            font-size: 13px;
+
+            line-height: 1.6;
+
+            opacity: 0.75;
+        }
+
+        .card-bottom {
+            margin-top: auto;
+
+            padding-top: 25px;
+        }
+
+        .card-bottom span {
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           CTA
+        ========================== */
+
+        .cta-section {
+            padding: 30px 7% 100px;
+
+            background: #F4F7EF;
+        }
+
+        .cta-box {
+            max-width: 1200px;
+
+            margin: auto;
+
+            background: #071A14;
+
+            color: white;
+
+            padding: 70px 50px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .cta-decoration {
+            width: 300px;
+            height: 300px;
+
+            position: absolute;
+
+            right: -100px;
+            top: -150px;
+
+            border-radius: 50%;
+
+            border: 50px solid
+                rgba(183, 230, 92, 0.08);
+        }
+
+        .cta-box .section-label {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-box h2 {
+            position: relative;
+            z-index: 2;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 45px;
+
+            line-height: 1.1;
+
+            margin: 15px 0;
+        }
+
+        .cta-box h2 span {
+            color: #B7E65C;
+        }
+
+        .cta-box p {
+            position: relative;
+            z-index: 2;
+
+            color: #AAB5AF;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+        .cta-box .primary-btn {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #071A14;
+
+            color: white;
+
+            padding: 65px 7% 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.4fr 1fr;
+
+            gap: 80px;
+        }
+
+
+        /* FOOTER BRAND */
+
+        .footer-brand {
+            max-width: 400px;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-brand > p {
+            color: #9DAAA4;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* SOCIAL ICONS */
+
+        .social-icons {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #40534B;
+
+            border-radius: 50%;
+
+            color: white;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #B7E65C;
+
+            border-color: #B7E65C;
+
+            color: #071A14;
+        }
+
+
+        /* FOOTER LINKS */
+
+        .footer-link {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+        }
+
+        .footer-link h4 {
+            color: #B7E65C;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+        .footer-link a {
+            display: block;
+
+            color: #B8C3BE;
+
+            font-size: 13px;
+
+            margin-bottom: 12px;
+
+            transition: 0.3s;
+        }
+
+        .footer-link a:hover {
+            color: #B7E65C;
+        }
+
+
+        /* FOOTER BOTTOM */
+
+        .footer-bottom {
+            max-width: 1200px;
+
+            margin: 50px auto 0;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #263B33;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: #77847E;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1100px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero-container {
+                gap: 30px;
+            }
+
+        }
+
+
+        @media (max-width: 950px) {
+
+            /* MOBILE NAV */
+
+            .nav-links {
+
+                position: absolute;
+
+                top: 74px;
+                left: 0;
+
+                width: 100%;
+
+                background: #071A14;
+
+                padding: 25px 30px;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 20px;
+
+                border-top:
+                    1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-btn {
+                display: none;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+
+            /* HERO */
+
+            .hero-container {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+                padding-top: 70px;
+            }
+
+            .hero-content {
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-mini-stats {
+                justify-content: center;
+            }
+
+
+            /* VISUAL */
+
+            .energy-visual {
+                min-height: 430px;
+            }
+
+
+            /* SECTION */
+
+            .section-heading {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+            .section-heading h2 {
+                font-size: 36px;
+            }
+
+
+            /* ENERGY CARDS */
+
+            .energy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .energy-card-solar,
+            .energy-card-wind,
+            .energy-card-green {
+                min-height: 250px;
+            }
+
+
+            /* FOOTER */
+
+            .footer-container {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                padding: 16px 5%;
+            }
+
+
+            /* HERO */
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-container {
+                padding: 60px 20px 80px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero-content > p {
+                font-size: 14px;
+            }
+
+
+            /* ENERGY VISUAL */
+
+            .energy-visual {
+                min-height: 380px;
+            }
+
+            .energy-circle {
+                width: 190px;
+                height: 190px;
+            }
+
+            .circle-inner {
+                width: 150px;
+                height: 150px;
+            }
+
+            .orbit-one {
+                width: 300px;
+                height: 300px;
+            }
+
+            .orbit-two {
+                width: 235px;
+                height: 235px;
+            }
+
+            .solar-card {
+                left: 0;
+                top: 55px;
+            }
+
+            .wind-card {
+                right: 0;
+                bottom: 45px;
+            }
+
+            .floating-card {
+                padding: 10px;
+            }
+
+
+            /* SECTIONS */
+
+            .energy-section {
+                padding: 70px 5%;
+            }
+
+            .section-heading h2 {
+                font-size: 32px;
+            }
+
+
+            /* CTA */
+
+            .cta-section {
+                padding: 20px 5% 70px;
+            }
+
+            .cta-box {
+                padding: 55px 25px;
+            }
+
+            .cta-box h2 {
+                font-size: 34px;
+            }
+
+
+            /* FOOTER */
+
+            footer {
+                padding: 50px 5% 20px;
+            }
+
+            .footer-link {
+                grid-template-columns: 1fr 1fr;
+
+                gap: 25px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+
+                text-align: center;
+
+                align-items: center;
+
+                margin-top: 35px;
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero-mini-stats {
+                gap: 30px;
+            }
+
+            .energy-visual {
+                min-height: 330px;
+            }
+
+            .energy-circle {
+                width: 160px;
+                height: 160px;
+            }
+
+            .circle-inner {
+                width: 125px;
+                height: 125px;
+            }
+
+            .circle-inner i {
+                font-size: 20px;
+            }
+
+            .circle-inner strong {
+                font-size: 16px;
+            }
+
+            .orbit-one {
+                width: 240px;
+                height: 240px;
+            }
+
+            .orbit-two {
+                width: 190px;
+                height: 190px;
+            }
+
+            .floating-card {
+                transform: scale(0.85);
+            }
+
+            .solar-card {
+                left: -15px;
+            }
+
+            .wind-card {
+                right: -15px;
+            }
+
+            .footer-link {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
     <header class="navbar">
+
         <div class="nav-container">
 
-            <!-- Logo -->
+
+            <!-- LOGO -->
 
             <a href="index.html" class="logo">
+
                 <span class="logo-icon">
                     <i class="fa-solid fa-leaf"></i>
                 </span>
@@ -39,248 +1327,784 @@
 
             </a>
 
+
             <!-- NAVIGATION -->
-            <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="solar.html" class="active">Solar </a>
-                <a href="wind.html" class="active">Wind</a>
-                <a href="green.html" class="active">Green Lifestyle</a>
-                <a href="impact.html" class="active">Energy Impact</a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="index.html" class="active">
+                    Home
+                </a>
+
+                <a href="solar.html">
+                    Solar
+                </a>
+
+                <a href="wind.html">
+                    Wind
+                </a>
+
+                <a href="green.html">
+                    Green Lifestyle
+                </a>
+
+                <a href="impact.html">
+                    Energy Impact
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </nav>
 
-            <a href="#explore" class="nav-btn">Explore
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
 
-                <!-- Hamburger -->
+            <!-- EXPLORE BUTTON -->
+
+            <a href="#explore" class="nav-btn">
+
+                Explore
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn">
 
                 <i class="fa-solid fa-bars"></i>
 
-                <!-- Cross -->
-
                 <i class="fa-solid fa-xmark"></i>
+
             </button>
 
+
         </div>
+
     </header>
 
-    <!-- HERO -->
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <main>
 
-        <!-- 1    -->
 
         <section class="hero">
+
             <div class="hero-container">
+
+
+                <!-- HERO CONTENT -->
 
                 <div class="hero-content">
 
+
                     <div class="eyebrow">
+
                         <span></span>
+
                         THE FUTURE IS RENEWABLE
+
                     </div>
+
+
                     <h1>
+
                         Energy for
+
                         <span>
                             a better
                         </span>
+
                         tomorrow.
+
                     </h1>
+
+
                     <p>
+
                         Discover how solar power, wind energy and
-                        Sustainable living can create a cleaner,
+                        sustainable living can create a cleaner,
                         healthier planet for everyone.
+
                     </p>
 
+
                     <div class="hero-buttons">
-                        <a href="#explore" class="primary-btn">Explore Energy
+
+                        <a
+                            href="#explore"
+                            class="primary-btn">
+
+                            Explore Energy
+
                             <i class="fa-solid fa-arrow-down"></i>
+
                         </a>
 
-                        <a href="solar.html" class="secondary-btn">Discover Solar
+
+                        <a
+                            href="solar.html"
+                            class="secondary-btn">
+
+                            Discover Solar
+
                             <i class="fa-solid fa-arrow-right"></i>
+
                         </a>
+
                     </div>
+
+
+                    <div class="hero-mini-stats">
+
+                        <div>
+
+                            <strong>
+                                100%
+                            </strong>
+
+                            <span>
+                                Renewable Future
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                24/7
+                            </strong>
+
+                            <span>
+                                Clean Energy
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
+
+
+
+                <!-- ENERGY VISUAL -->
+
+                <div class="energy-visual">
+
+
+                    <div class="visual-glow"></div>
+
+
+                    <!-- ORBITS -->
+
+                    <div class="orbit orbit-one"></div>
+
+                    <div class="orbit orbit-two"></div>
+
+
+                    <!-- ENERGY CIRCLE -->
+
+                    <div class="energy-circle">
+
+                        <div class="circle-inner">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                            <span>
+                                CLEAN
+                            </span>
+
+                            <strong>
+                                ENERGY
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SOLAR CARD -->
+
+                    <div class="floating-card solar-card">
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-sun"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small>
+                                SOLAR
+                            </small>
+
+                            <strong>
+                                Sun Power
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WIND CARD -->
+
+                    <div class="floating-card wind-card">
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-wind"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small>
+                                WIND
+                            </small>
+
+                            <strong>
+                                Clean Air
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LEAVES -->
+
+                    <div class="floating-leaf leaf-one">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                    </div>
+
+
+                    <div class="floating-leaf leaf-two">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                    </div>
+
+
+                </div>
+
             </div>
+
+
+            <!-- SCROLL -->
+
+            <div class="scroll-down">
+
+                <span>
+                    SCROLL TO EXPLORE
+                </span>
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </div>
+
+
         </section>
 
-        <!-- 2 -->
-        <section class="energy-section" id="explore">
+
+
+        <!-- =========================
+             ENERGY SOURCES
+        ========================== -->
+
+        <section
+            class="energy-section"
+            id="explore">
+
+
             <div class="section-container">
+
+
                 <div class="section-heading">
+
+
                     <div>
-                        <span class="section-label">01 - ENERGY SOURCES</span>
-                        <h2>Three ways to
-                            <span>power chnage.</span>
+
+                        <span class="section-label">
+                            01 - ENERGY SOURCES
+                        </span>
+
+
+                        <h2>
+
+                            Three ways to
+
+                            <span>
+                                power change.
+                            </span>
+
                         </h2>
+
                     </div>
+
+
                     <p>
+
                         Renewable energy isn't just about technology.
                         It's about building a cleaner relationship
                         between people and our planet.
+
                     </p>
+
+
                 </div>
+
+
+
+                <!-- ENERGY CARDS -->
 
                 <div class="energy-grid">
-                    <a href="solar.html" class="energy-card-solar">
+
+
+                    <!-- SOLAR -->
+
+                    <a
+                        href="solar.html"
+                        class="energy-card-solar">
+
+
                         <div class="card-top">
-                            <span>01</span>
+
+                            <span>
+                                01
+                            </span>
 
                         </div>
 
-                        <h3>Solar Energy</h3>
+
+                        <h3>
+                            Solar Energy
+                        </h3>
+
+
                         <p>
+
                             Turn sunlight into clean,
                             reliable electricity.
+
                         </p>
+
+
                         <div class="card-bottom">
-                            <span>EXPLORE SOLER</span>
+
+                            <span>
+                                EXPLORE SOLAR
+                            </span>
 
                         </div>
+
+
                     </a>
 
-                    <a href="wind.html" class="energy-card-wind">
+
+
+                    <!-- WIND -->
+
+                    <a
+                        href="wind.html"
+                        class="energy-card-wind">
+
+
                         <div class="card-top">
-                            <span>02</span>
+
+                            <span>
+                                02
+                            </span>
 
                         </div>
 
-                        <h3>Wind Power</h3>
+
+                        <h3>
+                            Wind Power
+                        </h3>
+
+
                         <p>
+
                             Harness the natural power
                             of moving air.
+
                         </p>
 
+
                         <div class="card-bottom">
-                            <span>EXPLORE WIND</span>
+
+                            <span>
+                                EXPLORE WIND
+                            </span>
 
                         </div>
+
+
                     </a>
 
-                    <a href="green.html" class="energy-card-green">
+
+
+                    <!-- GREEN LIFESTYLE -->
+
+                    <a
+                        href="green.html"
+                        class="energy-card-green">
+
+
                         <div class="card-top">
-                            <span>03</span>
+
+                            <span>
+                                03
+                            </span>
 
                         </div>
 
-                        <h3>Green Lifestyle</h3>
+
+                        <h3>
+                            Green Lifestyle
+                        </h3>
+
+
                         <p>
+
                             Small everyday choices can
-                            create a massive imp
                             create a massive impact.
+
                         </p>
 
+
                         <div class="card-bottom">
-                            <span>LIVE GREENER</span>
+
+                            <span>
+                                LIVE GREENER
+                            </span>
 
                         </div>
+
+
                     </a>
+
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- CTA -->
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
 
         <section class="cta-section">
+
+
             <div class="cta-box">
+
+
                 <div class="cta-decoration"></div>
+
+
                 <span class="section-label">
+
                     START YOUR JOURNEY
+
                 </span>
-                <h2>One planet.
+
+
+                <h2>
+
+                    One planet.
+
                     <br>
-                    <span>One better choice.</span>
+
+                    <span>
+                        One better choice.
+                    </span>
+
                 </h2>
+
+
                 <p>
-                    Learn how renewable energy can become part of your everyday life.
+
+                    Learn how renewable energy can become
+                    part of your everyday life.
+
                 </p>
-                <a href="solar.html" class="primary-btn dard">
+
+
+                <a
+                    href="solar.html"
+                    class="primary-btn">
+
                     Start Exploring
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
+
+
             </div>
 
+
         </section>
+
+
     </main>
 
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
+
+
         <div class="footer-container">
+
+
+            <!-- FOOTER BRAND -->
 
             <div class="footer-brand">
 
-                <a href="index.html" class="logo footer-logo">
-                    <span class="logo-icon"></span>
-                    <span>ECO<span>GEN</span></span>
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo">
+
+
+                    <span class="logo-icon">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                    </span>
+
+
+                    <span>
+
+                        ECO<span>GEN</span>
+
+                    </span>
+
+
                 </a>
+
+
                 <p>
+
                     Powering a cleaner future through
                     renewable energy and sustainable choices.
+
                 </p>
+
+
+                <!-- SOCIAL ICONS -->
 
                 <div class="social-icons">
 
-                    <a href="#" aria-label="Instagram">
+
+                    <a
+                        href="#"
+                        aria-label="Instagram">
+
                         <i class="fa-brands fa-instagram"></i>
+
                     </a>
 
-                    <a href="#" aria-label="Facebook">
+
+                    <a
+                        href="#"
+                        aria-label="Facebook">
+
                         <i class="fa-brands fa-facebook-f"></i>
+
                     </a>
 
-                    <a href="#" aria-label="YouTube">
+
+                    <a
+                        href="#"
+                        aria-label="YouTube">
+
                         <i class="fa-brands fa-youtube"></i>
+
                     </a>
 
-                    <a href="#" aria-label="LinkedIn">
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn">
+
                         <i class="fa-brands fa-linkedin-in"></i>
+
                     </a>
 
-                    <a href="#" aria-label="X">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
+
                 </div>
+
+
             </div>
 
+
+
+            <!-- FOOTER LINKS -->
+
             <div class="footer-link">
+
+
+                <!-- EXPLORE -->
+
                 <div>
-                    <h4>EXPLORE</h4>
+
+                    <h4>
+                        EXPLORE
+                    </h4>
+
 
                     <a href="index.html">
                         Home
                     </a>
 
+
                     <a href="solar.html">
                         Solar Energy
                     </a>
+
 
                     <a href="wind.html">
                         Wind Power
                     </a>
 
+
                     <a href="green.html">
                         Green Lifestyle
                     </a>
 
+
                     <a href="impact.html">
                         Energy Impact
                     </a>
+
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
                 </div>
+
+
+
+                <!-- CONNECT -->
+
                 <div>
-                    <h4>CONNECT</h4>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Email</a>
+
+                    <h4>
+                        CONNECT
+                    </h4>
+
+
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+
+
+                    <a href="mailto:hello@ecogen.com">
+                        Email
+                    </a>
+
+
                 </div>
+
+
             </div>
+
+
         </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
         <div class="footer-bottom">
-            <span>© 2026 ECOGEN
+
+
+            <span>
+                © 2026 ECOGEN
             </span>
+
 
             <span>
                 DESIGNED FOR A GREENER FUTURE 🌱
             </span>
+
+
         </div>
+
+
     </footer>
+
+
+
+
+
+    <script>
+
+        var menuBtn =
+            document.getElementById("menuBtn");
+
+        var navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.onclick = function () {
+
+
+            if (navLinks.style.display == "flex") {
+
+
+                navLinks.style.display = "none";
+
+
+                menuBtn.className =
+                    "menu-btn";
+
+
+            }
+
+
+            else {
+
+
+                navLinks.style.display =
+                    "flex";
+
+
+                menuBtn.className =
+                    "menu-btn open";
+
+
+            }
+
+        };
+
+    </script>
+
+
 </body>
 
 </html>
