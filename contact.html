@@ -13,21 +13,22 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet">
 
 
     <!-- Font Awesome -->
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
     <style>
+        /* =========================
+           BASIC
+        ========================= */
 
         * {
             margin: 0;
@@ -35,15 +36,10 @@
             box-sizing: border-box;
         }
 
-
         body {
-
             font-family: "DM Sans", sans-serif;
-
             background: #F4F7EF;
-
             color: #071A14;
-
         }
 
 
@@ -52,101 +48,87 @@
         ========================= */
 
         .navbar {
-
             background: #071A14;
-
             padding: 18px 7%;
-
         }
 
-
         .nav-container {
-
             max-width: 1200px;
-
             margin: auto;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
         }
 
 
         /* LOGO */
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
 
             color: white;
-
             text-decoration: none;
 
             font-family: "Space Grotesk", sans-serif;
-
-            font-size: 25px;
-
+            font-size: 23px;
             font-weight: 700;
-
         }
 
+        .logo-icon {
+            width: 34px;
+            height: 34px;
 
-        .logo span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
+            background: #B7E65C;
+            color: #071A14;
+
+            border-radius: 50%;
+
+            font-size: 16px;
+        }
+
+        .logo>span:last-child>span {
             color: #B7E65C;
-
         }
 
 
         /* NAV LINKS */
 
         .nav-links {
-
             display: flex;
-
             align-items: center;
-
             gap: 25px;
-
         }
 
-
         .nav-links a {
-
             color: white;
-
             text-decoration: none;
 
             font-size: 14px;
-
             font-weight: 500;
 
             transition: 0.3s;
-
         }
-
 
         .nav-links a:hover {
-
             color: #B7E65C;
-
         }
 
-
         .nav-links a.active {
-
             color: #B7E65C;
-
         }
 
 
         /* EXPLORE BUTTON */
 
         .nav-btn {
-
             background: #B7E65C;
-
             color: #071A14;
 
             text-decoration: none;
@@ -156,33 +138,24 @@
             border-radius: 5px;
 
             font-size: 13px;
-
             font-weight: 700;
 
             display: flex;
-
             align-items: center;
-
             gap: 8px;
-
         }
 
-
         .nav-btn:hover {
-
             background: white;
-
         }
 
 
         /* MENU BUTTON */
 
         .menu-btn {
-
             display: none;
 
             background: none;
-
             border: none;
 
             color: white;
@@ -190,28 +163,18 @@
             font-size: 22px;
 
             cursor: pointer;
-
         }
-
 
         .menu-btn .fa-xmark {
-
             display: none;
-
         }
-
 
         .menu-btn.open .fa-bars {
-
             display: none;
-
         }
 
-
         .menu-btn.open .fa-xmark {
-
             display: block;
-
         }
 
 
@@ -220,27 +183,20 @@
         ========================= */
 
         .contact-section {
-
             max-width: 900px;
 
             margin: 70px auto;
 
             padding: 0 25px;
-
         }
 
-
         .contact-heading {
-
             text-align: center;
 
             margin-bottom: 40px;
-
         }
 
-
         .contact-heading span {
-
             color: #1D6B4D;
 
             font-size: 12px;
@@ -248,27 +204,20 @@
             font-weight: 700;
 
             letter-spacing: 2px;
-
         }
 
-
         .contact-heading h1 {
-
             font-family: "Space Grotesk", sans-serif;
 
             font-size: 44px;
 
             margin: 10px 0;
-
         }
 
-
         .contact-heading p {
-
             color: #666;
 
             font-size: 15px;
-
         }
 
 
@@ -277,7 +226,6 @@
         ========================= */
 
         .contact-box {
-
             background: white;
 
             max-width: 700px;
@@ -289,14 +237,10 @@
             border-radius: 12px;
 
             box-shadow:
-
                 0 10px 30px rgba(0, 0, 0, 0.08);
-
         }
 
-
         .contact-box label {
-
             display: block;
 
             margin-bottom: 7px;
@@ -304,13 +248,10 @@
             font-size: 14px;
 
             font-weight: 600;
-
         }
-
 
         .contact-box input,
         .contact-box textarea {
-
             width: 100%;
 
             padding: 13px;
@@ -326,29 +267,20 @@
             font-size: 14px;
 
             outline: none;
-
         }
-
 
         .contact-box input:focus,
         .contact-box textarea:focus {
-
             border-color: #1D6B4D;
-
         }
 
-
         .contact-box textarea {
-
             height: 120px;
 
             resize: none;
-
         }
 
-
         .contact-box button {
-
             background: #1D6B4D;
 
             color: white;
@@ -366,16 +298,12 @@
             font-size: 14px;
 
             font-weight: 700;
-
         }
 
-
         .contact-box button:hover {
-
             background: #B7E65C;
 
             color: #071A14;
-
         }
 
 
@@ -384,26 +312,149 @@
         ========================= */
 
         footer {
-
             background: #071A14;
 
             color: white;
 
-            text-align: center;
-
-            padding: 25px;
+            padding: 65px 7% 20px;
 
             margin-top: 70px;
+        }
 
+        .footer-container {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.4fr 1fr;
+
+            gap: 80px;
         }
 
 
-        footer p {
+        /* FOOTER BRAND */
+
+        .footer-brand {
+            max-width: 400px;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-brand>p {
+            color: #9DAAA4;
 
             font-size: 13px;
 
-            color: #ddd;
+            line-height: 1.7;
 
+            margin-bottom: 25px;
+        }
+
+
+        /* SOCIAL ICONS */
+
+        .social-icons {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #40534B;
+
+            border-radius: 50%;
+
+            color: white;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #B7E65C;
+
+            border-color: #B7E65C;
+
+            color: #071A14;
+        }
+
+
+        /* FOOTER LINKS */
+
+        .footer-link {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+        }
+
+        .footer-link h4 {
+            color: #B7E65C;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+        .footer-link a {
+            display: block;
+
+            color: #B8C3BE;
+
+            font-size: 13px;
+
+            margin-bottom: 12px;
+
+            transition: 0.3s;
+
+            text-decoration: none;
+        }
+
+        .footer-link a:hover {
+            color: #B7E65C;
+        }
+
+
+        /* FOOTER BOTTOM */
+
+        .footer-bottom {
+            max-width: 1200px;
+
+            margin: 50px auto 0;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #263B33;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: #77847E;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
         }
 
 
@@ -414,11 +465,9 @@
         @media (max-width: 950px) {
 
             .nav-links {
-
                 position: absolute;
 
                 top: 74px;
-
                 left: 0;
 
                 width: 100%;
@@ -435,25 +484,27 @@
 
                 gap: 20px;
 
-                border-top: 1px solid
-                    rgba(255,255,255,0.1);
+                border-top:
+                    1px solid rgba(255, 255, 255, 0.1);
 
                 z-index: 10;
-
             }
-
 
             .nav-btn {
-
                 display: none;
+            }
 
+            .menu-btn {
+                display: block;
             }
 
 
-            .menu-btn {
+            /* FOOTER */
 
-                display: block;
+            .footer-container {
+                grid-template-columns: 1fr;
 
+                gap: 45px;
             }
 
         }
@@ -462,30 +513,42 @@
         @media (max-width: 700px) {
 
             .navbar {
-
                 padding: 18px 5%;
-
             }
-
 
             .contact-section {
-
                 margin: 50px auto;
-
             }
-
 
             .contact-heading h1 {
-
                 font-size: 32px;
+            }
 
+            .contact-box {
+                padding: 25px;
             }
 
 
-            .contact-box {
+            /* FOOTER */
 
-                padding: 25px;
+            footer {
+                padding: 50px 5% 20px;
+            }
 
+            .footer-link {
+                grid-template-columns: 1fr 1fr;
+
+                gap: 25px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+
+                text-align: center;
+
+                align-items: center;
+
+                margin-top: 35px;
             }
 
         }
@@ -494,27 +557,22 @@
         @media (max-width: 450px) {
 
             .contact-heading h1 {
-
                 font-size: 28px;
-
             }
-
 
             .contact-heading p {
-
                 font-size: 14px;
-
             }
 
-
             .contact-box {
-
                 padding: 20px;
+            }
 
+            .footer-link {
+                grid-template-columns: 1fr;
             }
 
         }
-
     </style>
 
 </head>
@@ -536,7 +594,15 @@
 
             <a href="index.html" class="logo">
 
-                <span>Eco</span>Gen
+                <span class="logo-icon">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                </span>
+
+                <span>
+                    ECO<span>GEN</span>
+                </span>
 
             </a>
 
@@ -574,9 +640,9 @@
 
             <!-- EXPLORE BUTTON -->
 
-            <a href="impact.html" class="nav-btn">
+            <a href="index.html" class="nav-btn">
 
-                Explore Impact
+                Back
 
                 <i class="fa-solid fa-arrow-right"></i>
 
@@ -600,9 +666,6 @@
 
 
 
-    <!-- =========================
-         CONTACT SECTION
-    ========================= -->
 
     <section class="contact-section">
 
@@ -634,34 +697,25 @@
 
             <form>
 
-
                 <label>
                     Name
                 </label>
 
-                <input
-                    type="text"
-                    placeholder="Enter your name">
-
+                <input type="text" placeholder="Enter your name">
 
 
                 <label>
                     Email
                 </label>
 
-                <input
-                    type="email"
-                    placeholder="Enter your email">
-
+                <input type="email" placeholder="Enter your email">
 
 
                 <label>
                     Message
                 </label>
 
-                <textarea
-                    placeholder="Write your message"></textarea>
-
+                <textarea placeholder="Write your message"></textarea>
 
 
                 <button type="submit">
@@ -672,33 +726,184 @@
 
                 </button>
 
-
             </form>
 
         </div>
-
 
     </section>
 
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+
 
     <footer>
 
-        <p>
-            © 2026 EcoGen | Sustainable Energy
-        </p>
+
+        <div class="footer-container">
+
+
+
+            <div class="footer-brand">
+
+
+                <a href="index.html" class="logo footer-logo">
+
+                    <span class="logo-icon">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                    </span>
+
+                    <span>
+                        ECO<span>GEN</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Powering a cleaner future through
+                    renewable energy and sustainable choices.
+
+                </p>
+
+
+                <!-- SOCIAL ICONS -->
+
+                <div class="social-icons">
+
+
+                    <a href="https://www.instagram.com/" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="https://www.facebook.com/" aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="https://www.youtube.com/" aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+                    <a href="https://in.linkedin.com/" aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FOOTER LINKS -->
+
+            <div class="footer-link">
+
+
+                <!-- EXPLORE -->
+
+                <div>
+
+                    <h4>
+                        EXPLORE
+                    </h4>
+
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+
+                    <a href="solar.html">
+                        Solar Energy
+                    </a>
+
+
+                    <a href="wind.html">
+                        Wind Power
+                    </a>
+
+
+                    <a href="green.html">
+                        Green Lifestyle
+                    </a>
+
+
+                    <a href="impact.html">
+                        Energy Impact
+                    </a>
+
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+
+                <!-- CONNECT -->
+
+                <div>
+
+                    <h4>
+                        CONNECT
+                    </h4>
+
+
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+
+
+                    <a href="mailto:hello@ecogen.com">
+                        Email
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ECOGEN
+            </span>
+
+            <span>
+                DESIGNED FOR A GREENER FUTURE 🌱
+            </span>
+
+        </div>
+
 
     </footer>
 
 
 
-    <!-- =========================
-         MENU JAVASCRIPT
-    ========================= -->
+
 
     <script>
 
@@ -711,7 +916,6 @@
 
         menuBtn.onclick = function () {
 
-
             if (navLinks.style.display == "flex") {
 
                 navLinks.style.display = "none";
@@ -723,7 +927,8 @@
 
             else {
 
-                navLinks.style.display = "flex";
+                navLinks.style.display =
+                    "flex";
 
                 menuBtn.className =
                     "menu-btn open";
